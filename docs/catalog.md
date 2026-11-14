@@ -4,7 +4,9 @@
 
 ZIP 링크를 연 뒤 GitHub 다운로드 버튼으로 저장하세요. 저장소 전체 ZIP과 개별 설치 ZIP을 구분하세요.
 
-## 기본 스킬 6개
+**장편 창작 신규 7개만 한 번에 받기:** [장편 스킬 묶음 ZIP](../downloads/fantasy-longform-seven-skills.zip). 묶음을 먼저 풀고 사용할 서비스 폴더의 개별 ZIP을 각각 업로드합니다. ChatGPT 프로젝트용 문서와 지침도 묶음에 포함됩니다.
+
+## 기본 스킬 13개
 
 | 이름 | 담당 작업 | ChatGPT | Claude | Gemini |
 |---|---|---|---|---|
@@ -14,6 +16,14 @@ ZIP 링크를 연 뒤 GitHub 다운로드 버튼으로 저장하세요. 저장�
 | `write-immersive-scenes` | [공간·감각·동선 묘사](write-immersive-scenes.md) | [ZIP](../dist/chatgpt/write-immersive-scenes.zip) | [ZIP](../dist/claude/write-immersive-scenes.zip) | [ZIP](../dist/gemini/write-immersive-scenes.zip) |
 | `refine-natural-korean` | [의미를 보존하는 한국어 퇴고](refine-natural-korean.md) | [ZIP](../dist/chatgpt/refine-natural-korean.zip) | [ZIP](../dist/claude/refine-natural-korean.zip) | [ZIP](../dist/gemini/refine-natural-korean.zip) |
 | `audit-fantasy-canon` | [정전·연속성 감사](audit-fantasy-canon.md) | [ZIP](../dist/chatgpt/audit-fantasy-canon.zip) | [ZIP](../dist/claude/audit-fantasy-canon.zip) | [ZIP](../dist/gemini/audit-fantasy-canon.zip) |
+
+| `plan-fantasy-longform` | [장편 구성·플롯 설계](plan-fantasy-longform.md) | [ZIP](../dist/chatgpt/plan-fantasy-longform.zip) | [ZIP](../dist/claude/plan-fantasy-longform.zip) | [ZIP](../dist/gemini/plan-fantasy-longform.zip) |
+| `design-character-arcs` | [인물 성장·관계 변화](design-character-arcs.md) | [ZIP](../dist/chatgpt/design-character-arcs.zip) | [ZIP](../dist/claude/design-character-arcs.zip) | [ZIP](../dist/gemini/design-character-arcs.zip) |
+| `manage-fantasy-foreshadowing` | [복선·비밀·회수 관리](manage-fantasy-foreshadowing.md) | [ZIP](../dist/chatgpt/manage-fantasy-foreshadowing.zip) | [ZIP](../dist/claude/manage-fantasy-foreshadowing.zip) | [ZIP](../dist/gemini/manage-fantasy-foreshadowing.zip) |
+| `structure-serial-chapters` | [회차 구성·연재 리듬](structure-serial-chapters.md) | [ZIP](../dist/chatgpt/structure-serial-chapters.zip) | [ZIP](../dist/claude/structure-serial-chapters.zip) | [ZIP](../dist/gemini/structure-serial-chapters.zip) |
+| `design-fantasy-action` | [판타지 전투·액션 설계](design-fantasy-action.md) | [ZIP](../dist/chatgpt/design-fantasy-action.zip) | [ZIP](../dist/claude/design-fantasy-action.zip) | [ZIP](../dist/gemini/design-fantasy-action.zip) |
+| `craft-character-dialogue` | [대사·인물별 말투 설계](craft-character-dialogue.md) | [ZIP](../dist/chatgpt/craft-character-dialogue.zip) | [ZIP](../dist/claude/craft-character-dialogue.zip) | [ZIP](../dist/gemini/craft-character-dialogue.zip) |
+| `review-fantasy-manuscript` | [판타지 원고 편집·진단](review-fantasy-manuscript.md) | [ZIP](../dist/chatgpt/review-fantasy-manuscript.zip) | [ZIP](../dist/claude/review-fantasy-manuscript.zip) | [ZIP](../dist/gemini/review-fantasy-manuscript.zip) |
 
 ChatGPT 스킬 메뉴가 없으면 [프로젝트 지침](../platforms/chatgpt/project-instructions.md)과 [프로젝트용 단일 문서](../dist/chatgpt-project)를 사용하세요.
 

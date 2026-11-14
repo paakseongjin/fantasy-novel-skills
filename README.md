@@ -4,7 +4,7 @@
 
 이 저장소의 스킬은 작가 대신 작품을 완성하거나 설정을 자동으로 기억하는 프로그램이 아닙니다. 작가가 전달한 세계관과 원고를 바탕으로 필요한 작업을 돕는 **재사용 가능한 창작 지침**입니다. 작품의 확정 설정과 최종 결정은 작가가 관리합니다.
 
-- **기본 스킬 6개:** 세계관 설계, 본문 집필, 인물 심리와 갈등, 장면 묘사, 한국어 퇴고, 정전 감사
+- **기본 스킬 13개:** 세계관·집필·퇴고·감사와 장편 플롯, 성장, 복선, 회차, 전투, 대사, 원고 진단
 - **세계관 분야별 선택형 8개:** 세계관 통합 스킬 대신 필요한 분야를 골라 사용할 수 있는 독립형 스킬
 - **창작 예시 216개:** 명칭 48개와 분야별 설정·검토 예시 168개. 완성된 세계관 216개를 뜻하지 않습니다.
 - **추가 자료:** 장르 프리셋 7종, 서로 연결된 세계관 예제, 설정집과 회차 인계 양식
@@ -12,7 +12,7 @@
 ## 목차
 
 - [어떤 스킬을 사용하면 되나요?](#어떤-스킬을-사용하면-되나요)
-- [기본 스킬 6개](#기본-스킬-6개)
+- [기본 스킬 13개](#기본-스킬-13개)
 - [세계관 분야별 선택형 8개](#세계관-분야별-선택형-8개)
 - [설치 및 시작하기](#설치-및-시작하기)
 - [작품을 만드는 순서와 요청 예시](#작품을-만드는-순서와-요청-예시)
@@ -32,7 +32,7 @@
 
 처음에는 필요한 기본 스킬만 골라 설치하세요. 세계관을 폭넓게 만들 때는 **통합형 `build-fantasy-world` 하나**로 시작하고, 특정 분야만 따로 쓰고 싶다면 아래의 분야별 선택형을 사용하면 됩니다. 두 구성을 모두 활성화할 필요는 없습니다.
 
-## 기본 스킬 6개
+## 기본 스킬 13개
 
 ### 1. 세계관 통합 설계 — `build-fantasy-world`
 
@@ -145,6 +145,22 @@ audit-fantasy-canon으로 첨부한 확정 설정과 12화를 검토해 줘.
 
 [정전 감사 스킬 자세히 보기](docs/audit-fantasy-canon.md)
 
+### 7~13. 장편 창작을 위한 추가 스킬
+
+작품 전체의 인과, 인물 변화, 복선과 회차의 흐름을 별도로 계획하고 필요한 부분만 검토합니다. 각 스킬은 4개의 독립 예시와 작업 기록 양식을 포함합니다.
+
+| 스킬 | 목적 | 상세 문서 |
+|---|---|---|
+| `plan-fantasy-longform` | 작품 전체의 인과, 이야기 단위와 결말을 설계합니다. | [장편 구성·플롯 설계](docs/plan-fantasy-longform.md) |
+| `design-character-arcs` | 장기적인 신념 변화와 관계의 계기·대가를 설계합니다. | [인물 성장·관계 변화](docs/design-character-arcs.md) |
+| `manage-fantasy-foreshadowing` | 실제 단서와 계획을 구분하고 정보 공개와 반전의 근거를 살핍니다. | [복선·비밀·회수 관리](docs/manage-fantasy-foreshadowing.md) |
+| `structure-serial-chapters` | 회차별 목표, 변화와 독자 경험의 리듬을 검토합니다. | [회차 구성·연재 리듬](docs/structure-serial-chapters.md) |
+| `design-fantasy-action` | 능력과 공간의 조건, 목표와 승패의 인과를 설계합니다. | [판타지 전투·액션 설계](docs/design-fantasy-action.md) |
+| `craft-character-dialogue` | 인물의 관계, 존대, 지식과 상황에 맞는 대화를 다듬습니다. | [대사·인물별 말투 설계](docs/craft-character-dialogue.md) |
+| `review-fantasy-manuscript` | 원고의 인과·독자 이해·장면 기능을 근거 중심으로 진단합니다. | [판타지 원고 편집·진단](docs/review-fantasy-manuscript.md) |
+
+전투·대사는 특정 분야에 집중할 때 선택적으로 사용합니다. 제공된 원고에서 확인되지 않은 설정이나 미작성 복선을 이미 확정된 사실로 처리하지 않습니다.
+
 ## 세계관 분야별 선택형 8개
 
 아래 스킬은 통합형 `build-fantasy-world`의 분야별 대안입니다. 필요한 스킬만 설치할 수 있고, 각 패키지에 해당 분야의 참고 자료가 포함되어 있습니다. 통합형이 이 8개를 자동으로 설치하는 것은 아닙니다.
@@ -170,6 +186,8 @@ design-fantasy-magic을 사용해 마법 체계 3개를 제안해 줘.
 ```
 
 [8개 분야와 216개 예시 자세히 보기](docs/worldbuilding.md) · [스킬별 다운로드](docs/catalog.md)
+
+**신규 장편 스킬 7개 한 번에 받기:** [장편 스킬 묶음 다운로드](downloads/fantasy-longform-seven-skills.zip). 묶음을 먼저 풀고 서비스별 개별 ZIP을 등록하세요.
 
 ## 설치 및 시작하기
 
@@ -257,6 +275,13 @@ refine-natural-korean을 적용해 다음 문장을 다듬어 줘.
 - [ChatGPT·Claude·Gemini 설치 안내](docs/installation.md)
 - [전체 스킬 목록과 플랫폼별 다운로드](docs/catalog.md)
 - [세계관 스킬팩과 예시 사용법](docs/worldbuilding.md)
+- [장편 구성·플롯 설계](docs/plan-fantasy-longform.md)
+- [인물 성장·관계 변화](docs/design-character-arcs.md)
+- [복선·비밀·회수 관리](docs/manage-fantasy-foreshadowing.md)
+- [회차 구성·연재 리듬](docs/structure-serial-chapters.md)
+- [판타지 전투·액션 설계](docs/design-fantasy-action.md)
+- [대사·인물별 말투 설계](docs/craft-character-dialogue.md)
+- [판타지 원고 편집·진단](docs/review-fantasy-manuscript.md)
 - [판타지 집필](docs/write-fantasy-prose.md)
 - [인물 심리와 관계 갈등](docs/write-character-conflict.md)
 - [장면 묘사와 몰입감](docs/write-immersive-scenes.md)

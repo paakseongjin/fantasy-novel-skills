@@ -41,3 +41,7 @@ audit-fantasy-canon으로 아래 자료만 감사해 줘.
 ```
 
 감사에서 제안한 변경을 채택하면 대상 설정·적용 시점·바뀌는 회차를 명확히 전달합니다. 작품 상태는 별도 정전 문서에 모아 다음 대화에도 제공합니다. 스킬 파일과 예시집을 작품 정전 대신 사용하지 않습니다.
+
+## 장편 설계와 회차 연재 확장
+
+작품 전체의 인과는 [장편 플롯](plan-fantasy-longform.md), 장기 인물 변화는 [인물 성장](design-character-arcs.md), 복선과 반전은 [복선 관리](manage-fantasy-foreshadowing.md), 회차 간 리듬은 [회차 구성](structure-serial-chapters.md)을 적용합니다. 필요하면 [전투](design-fantasy-action.md)와 [대사](craft-character-dialogue.md)를 집중 설계하고 [원고 진단](review-fantasy-manuscript.md)으로 독자의 이해와 구조를 점검합니다. 정전 충돌의 근거 확인은 기존 감사와 나누어 중복을 피합니다.

@@ -10,8 +10,8 @@ from build_packages import ROOT, LINK, collect, expected_outputs
 def main():
     errors = []
     skills, core = collect()
-    if len(core) != 6 or len(skills) != 14:
-        errors.append("Expected 6 core and 8 optional skills")
+    if len(core) != 13 or len(skills) != 21:
+        errors.append("Expected 13 core and 8 optional skills")
     counts = {"world": ("W", 24), "names": ("N", 48), "magic": ("M", 24),
               "ranks": ("H", 24), "nations": ("C", 24), "peoples": ("P", 24),
               "religions": ("R", 24), "canon": ("A", 24)}
@@ -36,12 +36,13 @@ def main():
         if not dest.is_file() or dest.read_bytes() != data:
             errors.append(f"Generated file differs or missing: {path}")
     actual = {p.relative_to(ROOT).as_posix() for p in (ROOT / "dist").rglob("*") if p.is_file()}
-    if actual != set(outputs):
-        errors.append(f"Unexpected dist files: {sorted(actual - set(outputs))}")
+    expected_dist = {p for p in outputs if p.startswith("dist/")}
+    if actual != expected_dist:
+        errors.append(f"Unexpected dist files: {sorted(actual - expected_dist)}")
     if errors:
         print("\n".join(errors), file=sys.stderr)
         return 1
-    print("PASS: 14 skills, 42 ZIPs, 6 project documents, 216 example IDs, references and links.")
+    print("PASS: 21 skills, 63 ZIPs, 13 project documents, 216 example IDs, references and links.")
     print("Live platform installation/model execution: not tested.")
     return 0
 

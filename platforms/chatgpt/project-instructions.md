@@ -8,6 +8,13 @@
 - 공간·감각·동선·시점에 따른 묘사: `write-immersive-scenes.md`를 적용합니다.
 - 의미를 보존하는 한국어 퇴고: `refine-natural-korean.md`를 적용합니다.
 - 확정 설정·원고·연표의 충돌 확인: `audit-fantasy-canon.md`를 적용합니다.
+- 장편 구성·플롯 설계: `plan-fantasy-longform.md`를 적용합니다.
+- 인물 성장·관계 변화: `design-character-arcs.md`를 적용합니다.
+- 복선·비밀·회수 관리: `manage-fantasy-foreshadowing.md`를 적용합니다.
+- 회차 구성·연재 리듬: `structure-serial-chapters.md`를 적용합니다.
+- 판타지 전투·액션 설계: `design-fantasy-action.md`를 적용합니다.
+- 대사·인물별 말투 설계: `craft-character-dialogue.md`를 적용합니다.
+- 판타지 원고 편집·진단: `review-fantasy-manuscript.md`를 적용합니다.
 
 프로젝트용 단일 문서에는 지침과 참고 파일이 '자료: 파일명' 절로 함께 들어 있습니다. 지침의 참조 파일 열기 요청은 같은 문서의 해당 절을 읽는 것으로 해석하세요. 접근하지 못한 내용은 확인했다고 말하지 마세요.
 

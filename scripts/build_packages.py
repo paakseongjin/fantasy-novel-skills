@@ -12,6 +12,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PLATFORMS = ("chatgpt", "claude", "gemini")
+LONGFORM = ("plan-fantasy-longform", "design-character-arcs", "manage-fantasy-foreshadowing",
+            "structure-serial-chapters", "design-fantasy-action", "craft-character-dialogue",
+            "review-fantasy-manuscript")
 LINK = re.compile(r"\[([^\]]+)\]\(([^\s)]+)\)")
 
 
@@ -113,6 +116,38 @@ def project_document(name, payload):
     return "\n".join(parts).encode()
 
 
+def longform_bundle(outputs):
+    entries = {}
+    for platform in PLATFORMS:
+        for name in LONGFORM:
+            entries[f"{platform}/{name}.zip"] = outputs[f"dist/{platform}/{name}.zip"]
+    for name in LONGFORM:
+        entries[f"chatgpt-project/{name}.md"] = outputs[f"dist/chatgpt-project/{name}.md"]
+    entries["chatgpt-project/project-instructions.md"] = (
+        ROOT / "platforms/chatgpt/project-instructions.md").read_bytes()
+    entries["사용안내.txt"] = (
+        "장편 판타지 신규 스킬 7개\n\n이 묶음을 먼저 압축 해제하세요. chatgpt, claude, "
+        "gemini 폴더에는 해당 서비스별 개별 ZIP 7개가 들어 있습니다. 바깥 묶음 전체가 "
+        "아니라 필요한 개별 ZIP을 각각 업로드하세요.\n\nChatGPT에서 스킬 업로드를 제공하지 "
+        "않는 계정은 프로젝트 지침을 복사하고 chatgpt-project의 필요한 Markdown 문서를 "
+        "프로젝트 자료에 추가하세요. 이 방식은 스킬 설치와 다릅니다.\n\n플랫폼의 제공 여부·"
+        "계정·메뉴는 다를 수 있으며 실제 계정 설치는 검증하지 않았습니다. 공식 상세 안내: "
+        "https://github.com/paakseongjin/fantasy-novel-skills/blob/main/docs/installation.md\n"
+    ).encode()
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+        for path, content in sorted(entries.items()):
+            info = zipfile.ZipInfo(path, date_time=(2026, 11, 14, 0, 0, 0))
+            info.create_system = 3
+            info.external_attr = 0o100644 << 16
+            info.compress_type = zipfile.ZIP_DEFLATED
+            z.writestr(info, content, compresslevel=9)
+    with zipfile.ZipFile(io.BytesIO(buffer.getvalue())) as z:
+        assert z.testzip() is None
+        assert {p: z.read(p) for p in z.namelist()} == entries
+    return buffer.getvalue()
+
+
 def expected_outputs():
     skills, core_names = collect()
     outputs = {}
@@ -131,6 +166,7 @@ def expected_outputs():
               "zip_count": len(records), "packages": records,
               "live_platform_installation_tested": False}
     outputs["dist/manifest.json"] = (json.dumps(report, ensure_ascii=False, indent=2) + "\n").encode()
+    outputs["downloads/fantasy-longform-seven-skills.zip"] = longform_bundle(outputs)
     return outputs
 
 
@@ -148,13 +184,13 @@ def main():
         else:
             dest.parent.mkdir(parents=True, exist_ok=True)
             dest.write_bytes(data)
-    expected = set(outputs)
+    expected = {p for p in outputs if p.startswith("dist/")}
     actual = {p.relative_to(ROOT).as_posix() for p in (ROOT / "dist").rglob("*") if p.is_file()}
     errors.extend(sorted(actual - expected))
     if errors:
         print("Stale, missing, or unexpected generated files:\n" + "\n".join(errors), file=sys.stderr)
         return 1
-    print(f"{'Verified' if args.check else 'Built'} 42 ZIPs, 6 project documents, and manifest.")
+    print(f"{'Verified' if args.check else 'Built'} 63 ZIPs, 13 project documents, and manifest.")
     return 0
 
 
