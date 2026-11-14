@@ -4,7 +4,7 @@
 
 ## 설치
 
-[서비스별 설치 안내](installation.md)를 따라 Gemini 또는 Claude용 ZIP을 업로드하거나 ChatGPT 프로젝트에 지침과 자료를 등록하세요. 등록 후 적용 여부를 확인하세요.
+[서비스별 설치 안내](installation.md)를 따라 서비스에 맞는 개별 ZIP을 등록하세요. ChatGPT 스킬 메뉴가 없으면 프로젝트 지침·자료 방식을 사용하세요. [다운로드 목록](catalog.md)에서 파일을 선택할 수 있습니다. 등록 후 적용 여부를 확인하세요.
 
 ## 사용 순서
 
@@ -21,3 +21,4 @@ write-fantasy-prose 스킬을 사용해 주세요.
 ```
 
 `references/SCENE_CARD_TEMPLATE.md`는 장면 설계, `CHAPTER_HANDOFF_TEMPLATE.md`는 다음 회차 인계, `PROSE_CHECK_TEMPLATE.md`는 원고 점검에 활용합니다. 제공하지 않은 자료를 알고 있다고 가정해서는 안 됩니다.
+

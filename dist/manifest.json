@@ -1,0 +1,277 @@
+{
+  "schema": 1,
+  "core_skills": [
+    "audit-fantasy-canon",
+    "build-fantasy-world",
+    "refine-natural-korean",
+    "write-character-conflict",
+    "write-fantasy-prose",
+    "write-immersive-scenes"
+  ],
+  "optional_worldbuilding_skills": [
+    "audit-fantasy-worldbuilding",
+    "design-fantasy-institutions",
+    "design-fantasy-magic",
+    "design-fantasy-nations",
+    "design-fantasy-peoples",
+    "design-fantasy-religions",
+    "design-fantasy-world",
+    "name-fantasy-world"
+  ],
+  "zip_count": 42,
+  "packages": [
+    {
+      "path": "dist/chatgpt/audit-fantasy-canon.zip",
+      "sha256": "7fe66068f8652c8d72dbebaa6b7aa4635993cc2bf54cf13020db14cd92c28db4",
+      "bytes": 9050,
+      "files": 5
+    },
+    {
+      "path": "dist/claude/audit-fantasy-canon.zip",
+      "sha256": "7fe66068f8652c8d72dbebaa6b7aa4635993cc2bf54cf13020db14cd92c28db4",
+      "bytes": 9050,
+      "files": 5
+    },
+    {
+      "path": "dist/gemini/audit-fantasy-canon.zip",
+      "sha256": "5f3f3e814a1c59423f172aff301cdb60788d41bcbff3f4f3af82d9e3da6c04b9",
+      "bytes": 8850,
+      "files": 5
+    },
+    {
+      "path": "dist/chatgpt/audit-fantasy-worldbuilding.zip",
+      "sha256": "e00fd8f35281298057e9a6afc04501ede4314ab1269b3ebd835a04dca77b446b",
+      "bytes": 15729,
+      "files": 7
+    },
+    {
+      "path": "dist/claude/audit-fantasy-worldbuilding.zip",
+      "sha256": "e00fd8f35281298057e9a6afc04501ede4314ab1269b3ebd835a04dca77b446b",
+      "bytes": 15729,
+      "files": 7
+    },
+    {
+      "path": "dist/gemini/audit-fantasy-worldbuilding.zip",
+      "sha256": "6e2bb5d9633c405daa3ab1564c2ff43e3ef33ab6f3192b96bedf441c6231f087",
+      "bytes": 15337,
+      "files": 7
+    },
+    {
+      "path": "dist/chatgpt/build-fantasy-world.zip",
+      "sha256": "79f7a9bcc177312fd90b99853dc415881491ac49642335f3c73a9fd53c39987a",
+      "bytes": 55712,
+      "files": 22
+    },
+    {
+      "path": "dist/claude/build-fantasy-world.zip",
+      "sha256": "79f7a9bcc177312fd90b99853dc415881491ac49642335f3c73a9fd53c39987a",
+      "bytes": 55712,
+      "files": 22
+    },
+    {
+      "path": "dist/gemini/build-fantasy-world.zip",
+      "sha256": "6a6848f444393c74a762dd56d66b94f2556373bbec28f7bd0fb74e6a87df4a1c",
+      "bytes": 54832,
+      "files": 22
+    },
+    {
+      "path": "dist/chatgpt/design-fantasy-institutions.zip",
+      "sha256": "ae007c9617a1cc1e63142193b5e91274af6e78b17f7565fe31c7617ac230ec60",
+      "bytes": 12899,
+      "files": 6
+    },
+    {
+      "path": "dist/claude/design-fantasy-institutions.zip",
+      "sha256": "ae007c9617a1cc1e63142193b5e91274af6e78b17f7565fe31c7617ac230ec60",
+      "bytes": 12899,
+      "files": 6
+    },
+    {
+      "path": "dist/gemini/design-fantasy-institutions.zip",
+      "sha256": "4af117fd6998507f39ba9f191302ac824ef9d3201824b018baa78f03e54920f8",
+      "bytes": 12563,
+      "files": 6
+    },
+    {
+      "path": "dist/chatgpt/design-fantasy-magic.zip",
+      "sha256": "5d86b8d45135984eb00c5bd64f62497eb60235558558c1a0303945bfe19ee718",
+      "bytes": 13336,
+      "files": 6
+    },
+    {
+      "path": "dist/claude/design-fantasy-magic.zip",
+      "sha256": "5d86b8d45135984eb00c5bd64f62497eb60235558558c1a0303945bfe19ee718",
+      "bytes": 13336,
+      "files": 6
+    },
+    {
+      "path": "dist/gemini/design-fantasy-magic.zip",
+      "sha256": "81be0a2d8950c1224f1407bdf5fc81b2f418c5b138180c8d4b7005bce13ce6d2",
+      "bytes": 13084,
+      "files": 6
+    },
+    {
+      "path": "dist/chatgpt/design-fantasy-nations.zip",
+      "sha256": "33b0cc6a05db9e215b99f54bd1fab54abab05b266f47220a099d40dea2667dcd",
+      "bytes": 9586,
+      "files": 5
+    },
+    {
+      "path": "dist/claude/design-fantasy-nations.zip",
+      "sha256": "33b0cc6a05db9e215b99f54bd1fab54abab05b266f47220a099d40dea2667dcd",
+      "bytes": 9586,
+      "files": 5
+    },
+    {
+      "path": "dist/gemini/design-fantasy-nations.zip",
+      "sha256": "3594993d1227deb1fee17aeba2876eab55aa79f4f5ca0d79314ef684bc033694",
+      "bytes": 9356,
+      "files": 5
+    },
+    {
+      "path": "dist/chatgpt/design-fantasy-peoples.zip",
+      "sha256": "4f79221f00596b3fa4b927b2577692786fd237adcc18029873de06babe6c1501",
+      "bytes": 9852,
+      "files": 5
+    },
+    {
+      "path": "dist/claude/design-fantasy-peoples.zip",
+      "sha256": "4f79221f00596b3fa4b927b2577692786fd237adcc18029873de06babe6c1501",
+      "bytes": 9852,
+      "files": 5
+    },
+    {
+      "path": "dist/gemini/design-fantasy-peoples.zip",
+      "sha256": "1fea6f86cf0b3d11edb7b1e77f3d549a86857a561db80238a7b9c6c4314c87ab",
+      "bytes": 9622,
+      "files": 5
+    },
+    {
+      "path": "dist/chatgpt/design-fantasy-religions.zip",
+      "sha256": "6935bceb405b836cc01cbe060091559282af258683f67bb3657f39238ab7833f",
+      "bytes": 9654,
+      "files": 5
+    },
+    {
+      "path": "dist/claude/design-fantasy-religions.zip",
+      "sha256": "6935bceb405b836cc01cbe060091559282af258683f67bb3657f39238ab7833f",
+      "bytes": 9654,
+      "files": 5
+    },
+    {
+      "path": "dist/gemini/design-fantasy-religions.zip",
+      "sha256": "bc43ee643d775707f499325b7f81d1ee32e5905d164e682b6b642cae36be0c03",
+      "bytes": 9404,
+      "files": 5
+    },
+    {
+      "path": "dist/chatgpt/design-fantasy-world.zip",
+      "sha256": "474927b8dd007ae75d5f039a666639c5f18bcd10e23c230751abc6bf2af2510a",
+      "bytes": 18648,
+      "files": 8
+    },
+    {
+      "path": "dist/claude/design-fantasy-world.zip",
+      "sha256": "474927b8dd007ae75d5f039a666639c5f18bcd10e23c230751abc6bf2af2510a",
+      "bytes": 18648,
+      "files": 8
+    },
+    {
+      "path": "dist/gemini/design-fantasy-world.zip",
+      "sha256": "f6fad3e79d64a7cb3ca9f7215daead791b033459c12885479a0bab80f89358cc",
+      "bytes": 18312,
+      "files": 8
+    },
+    {
+      "path": "dist/chatgpt/name-fantasy-world.zip",
+      "sha256": "e58e7d1f5f998af1b07bf7a3f2e125d01d528517e1b960853b9320b7b1391db2",
+      "bytes": 10966,
+      "files": 5
+    },
+    {
+      "path": "dist/claude/name-fantasy-world.zip",
+      "sha256": "e58e7d1f5f998af1b07bf7a3f2e125d01d528517e1b960853b9320b7b1391db2",
+      "bytes": 10966,
+      "files": 5
+    },
+    {
+      "path": "dist/gemini/name-fantasy-world.zip",
+      "sha256": "994fa3de2199186378f8ff6b476120c3219d7bf5d84c917333bf0377f2dad302",
+      "bytes": 10776,
+      "files": 5
+    },
+    {
+      "path": "dist/chatgpt/refine-natural-korean.zip",
+      "sha256": "5832a3e91ee8ad2f0791c1da9c09ded43411471ce56237a4ab01e968930de650",
+      "bytes": 3572,
+      "files": 1
+    },
+    {
+      "path": "dist/claude/refine-natural-korean.zip",
+      "sha256": "5832a3e91ee8ad2f0791c1da9c09ded43411471ce56237a4ab01e968930de650",
+      "bytes": 3572,
+      "files": 1
+    },
+    {
+      "path": "dist/gemini/refine-natural-korean.zip",
+      "sha256": "51a99b186ad6321848541744444370576205ff873bbb3eaef75608deb883b137",
+      "bytes": 3528,
+      "files": 1
+    },
+    {
+      "path": "dist/chatgpt/write-character-conflict.zip",
+      "sha256": "bab18048c700cb808f00e6206d3c5c7297ce6317ab03f8badf83d67dfe105ee5",
+      "bytes": 3315,
+      "files": 1
+    },
+    {
+      "path": "dist/claude/write-character-conflict.zip",
+      "sha256": "bab18048c700cb808f00e6206d3c5c7297ce6317ab03f8badf83d67dfe105ee5",
+      "bytes": 3315,
+      "files": 1
+    },
+    {
+      "path": "dist/gemini/write-character-conflict.zip",
+      "sha256": "789383559e520f6d3399d0d256c1e5b46f760b86bb980aef07b310ca5eea39b4",
+      "bytes": 3265,
+      "files": 1
+    },
+    {
+      "path": "dist/chatgpt/write-fantasy-prose.zip",
+      "sha256": "d06217c2c6b92d7fd6cb65c0ea70f2880fddc5db495f8bf3916f816e5ca53e16",
+      "bytes": 7125,
+      "files": 4
+    },
+    {
+      "path": "dist/claude/write-fantasy-prose.zip",
+      "sha256": "d06217c2c6b92d7fd6cb65c0ea70f2880fddc5db495f8bf3916f816e5ca53e16",
+      "bytes": 7125,
+      "files": 4
+    },
+    {
+      "path": "dist/gemini/write-fantasy-prose.zip",
+      "sha256": "8ea8d6b461c239e3b4f670459e1c360be9c59b246e2f8f7d08e954a71f7a321d",
+      "bytes": 6965,
+      "files": 4
+    },
+    {
+      "path": "dist/chatgpt/write-immersive-scenes.zip",
+      "sha256": "bf1cfce0dfd275c92c44fd82f4ce769b60ec46ba584778ad3002ed46df57541c",
+      "bytes": 3171,
+      "files": 1
+    },
+    {
+      "path": "dist/claude/write-immersive-scenes.zip",
+      "sha256": "bf1cfce0dfd275c92c44fd82f4ce769b60ec46ba584778ad3002ed46df57541c",
+      "bytes": 3171,
+      "files": 1
+    },
+    {
+      "path": "dist/gemini/write-immersive-scenes.zip",
+      "sha256": "19bc2f78c76740c640920c23a5c593cae9f33f19190f769573120ec9ab007841",
+      "bytes": 3125,
+      "files": 1
+    }
+  ],
+  "live_platform_installation_tested": false
+}
