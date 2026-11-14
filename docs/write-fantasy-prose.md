@@ -4,7 +4,7 @@
 
 ## 설치
 
-[공통 설치 안내](installation.md)에 따라 `skills/write-fantasy-prose` 폴더 전체를 `.agents/skills/write-fantasy-prose`로 복사하고 `/skills`에서 이름을 확인하세요.
+[서비스별 설치 안내](installation.md)를 따라 Gemini 또는 Claude용 ZIP을 업로드하거나 ChatGPT 프로젝트에 지침과 자료를 등록하세요. 등록 후 적용 여부를 확인하세요.
 
 ## 사용 순서
 
