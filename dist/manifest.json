@@ -33,56 +33,56 @@
   "packages": [
     {
       "path": "dist/chatgpt/audit-dropout-risks.zip",
-      "sha256": "f4beaef647dab55ea9e22f31a002ca8c29e4b367f263a506cad5ad9cecd2d678",
-      "bytes": 3293,
+      "sha256": "e0e9ee34bb50cb50651c338a7ab885babb00ae647fc837c9584f6e1bc853a35d",
+      "bytes": 3386,
       "files": 2
     },
     {
       "path": "dist/claude/audit-dropout-risks.zip",
-      "sha256": "f4beaef647dab55ea9e22f31a002ca8c29e4b367f263a506cad5ad9cecd2d678",
-      "bytes": 3293,
+      "sha256": "e0e9ee34bb50cb50651c338a7ab885babb00ae647fc837c9584f6e1bc853a35d",
+      "bytes": 3386,
       "files": 2
     },
     {
       "path": "dist/gemini/audit-dropout-risks.zip",
-      "sha256": "0896f72e0a176823f0f606782d66c31bc70eaea1b4d65858f2ddacbc0c9c8aef",
-      "bytes": 3213,
+      "sha256": "851eb0c58d5d90c9f11e3b71bf2ae77502218521c06345f4ea0451a8eb5023e8",
+      "bytes": 3306,
       "files": 2
     },
     {
       "path": "dist/chatgpt/audit-fantasy-canon.zip",
-      "sha256": "7fe66068f8652c8d72dbebaa6b7aa4635993cc2bf54cf13020db14cd92c28db4",
-      "bytes": 9050,
+      "sha256": "ad3cd0dcaa37d79c7c85faf147f2a1a7f7f0bce86541cd675ec8289259f97896",
+      "bytes": 9246,
       "files": 5
     },
     {
       "path": "dist/claude/audit-fantasy-canon.zip",
-      "sha256": "7fe66068f8652c8d72dbebaa6b7aa4635993cc2bf54cf13020db14cd92c28db4",
-      "bytes": 9050,
+      "sha256": "ad3cd0dcaa37d79c7c85faf147f2a1a7f7f0bce86541cd675ec8289259f97896",
+      "bytes": 9246,
       "files": 5
     },
     {
       "path": "dist/gemini/audit-fantasy-canon.zip",
-      "sha256": "5f3f3e814a1c59423f172aff301cdb60788d41bcbff3f4f3af82d9e3da6c04b9",
-      "bytes": 8850,
+      "sha256": "87c3e51e1b9b8732f63ca4576d2b32d52b4e4dbe5942e1d442d0885e3203a6d1",
+      "bytes": 9046,
       "files": 5
     },
     {
       "path": "dist/chatgpt/audit-fantasy-worldbuilding.zip",
-      "sha256": "e00fd8f35281298057e9a6afc04501ede4314ab1269b3ebd835a04dca77b446b",
-      "bytes": 15729,
+      "sha256": "d666e78ba76c89c45829cc7be79da0029a462ac3356488acb9ed885af1ed7b8c",
+      "bytes": 15830,
       "files": 7
     },
     {
       "path": "dist/claude/audit-fantasy-worldbuilding.zip",
-      "sha256": "e00fd8f35281298057e9a6afc04501ede4314ab1269b3ebd835a04dca77b446b",
-      "bytes": 15729,
+      "sha256": "d666e78ba76c89c45829cc7be79da0029a462ac3356488acb9ed885af1ed7b8c",
+      "bytes": 15830,
       "files": 7
     },
     {
       "path": "dist/gemini/audit-fantasy-worldbuilding.zip",
-      "sha256": "6e2bb5d9633c405daa3ab1564c2ff43e3ef33ab6f3192b96bedf441c6231f087",
-      "bytes": 15337,
+      "sha256": "e63c0c2c8695bfeb34a240557477d804d03b88d8120b094e64dad640beceaa5f",
+      "bytes": 15438,
       "files": 7
     },
     {
@@ -303,20 +303,20 @@
     },
     {
       "path": "dist/chatgpt/manage-fantasy-foreshadowing.zip",
-      "sha256": "2d5ae7f7d9e41c19a854c1a93f1541fd16518f20b243d6a31f629ceebe5ddcab",
-      "bytes": 2684,
+      "sha256": "137a4b872de48efbe160b5809c36df56f13c7d0adbe1081d101dd540b5c74df0",
+      "bytes": 2759,
       "files": 2
     },
     {
       "path": "dist/claude/manage-fantasy-foreshadowing.zip",
-      "sha256": "2d5ae7f7d9e41c19a854c1a93f1541fd16518f20b243d6a31f629ceebe5ddcab",
-      "bytes": 2684,
+      "sha256": "137a4b872de48efbe160b5809c36df56f13c7d0adbe1081d101dd540b5c74df0",
+      "bytes": 2759,
       "files": 2
     },
     {
       "path": "dist/gemini/manage-fantasy-foreshadowing.zip",
-      "sha256": "9c27ac335e6e1aad06cf9d979e3c0ba6a02834a2dc61b3f01120f4cd8ddefe2a",
-      "bytes": 2568,
+      "sha256": "6944175ecaf98a6e1a5563160c0cf2551857d4505b9901b2fcd8cb525e92ab72",
+      "bytes": 2643,
       "files": 2
     },
     {
@@ -339,20 +339,20 @@
     },
     {
       "path": "dist/chatgpt/plan-fantasy-longform.zip",
-      "sha256": "5a05d2c649a7ffd4d278ac20c97f2029570ea5cfb136d74179f320c412a979e6",
-      "bytes": 2818,
+      "sha256": "014dad13564a72a1935a281d44d26acd63f0d4c2fc7296649f85f7a155a1b84c",
+      "bytes": 2911,
       "files": 2
     },
     {
       "path": "dist/claude/plan-fantasy-longform.zip",
-      "sha256": "5a05d2c649a7ffd4d278ac20c97f2029570ea5cfb136d74179f320c412a979e6",
-      "bytes": 2818,
+      "sha256": "014dad13564a72a1935a281d44d26acd63f0d4c2fc7296649f85f7a155a1b84c",
+      "bytes": 2911,
       "files": 2
     },
     {
       "path": "dist/gemini/plan-fantasy-longform.zip",
-      "sha256": "6a7853f351cb7670dac74084f6e68445dd0d8cc8f253a24e1244359408a26dd2",
-      "bytes": 2730,
+      "sha256": "0b2705d03c7a52093261d0edb5e5cc78c5adedf31a1cd729b1d7069b1eb83aab",
+      "bytes": 2823,
       "files": 2
     },
     {
@@ -393,38 +393,38 @@
     },
     {
       "path": "dist/chatgpt/review-fantasy-manuscript.zip",
-      "sha256": "1c058a40ef42ffd04520e87125115a57cd15e28cb9d559ebabe9dab5f2a9527b",
-      "bytes": 2652,
+      "sha256": "41874b007c4b5f24b59d8d20b0f2a504cbc56ffca887457452c114999364a7e9",
+      "bytes": 2768,
       "files": 2
     },
     {
       "path": "dist/claude/review-fantasy-manuscript.zip",
-      "sha256": "1c058a40ef42ffd04520e87125115a57cd15e28cb9d559ebabe9dab5f2a9527b",
-      "bytes": 2652,
+      "sha256": "41874b007c4b5f24b59d8d20b0f2a504cbc56ffca887457452c114999364a7e9",
+      "bytes": 2768,
       "files": 2
     },
     {
       "path": "dist/gemini/review-fantasy-manuscript.zip",
-      "sha256": "cf154e954a0d16952dfc1e9d44b66710e7c100ae112ba12e68abaf45a4f31a9b",
-      "bytes": 2548,
+      "sha256": "d475f59134b96fc5175d676e3b76aec811cddf53e4d2f25a925ef8931a44af9c",
+      "bytes": 2664,
       "files": 2
     },
     {
       "path": "dist/chatgpt/structure-serial-chapters.zip",
-      "sha256": "b2090e69fcd444ede3f23ffeb36720ddb28a1729654065d3a342b94445487cef",
-      "bytes": 2605,
+      "sha256": "f28f4b4034c691a4e104d74a35f31da0cc85ce6cc9d632d2e6fdca707b197c82",
+      "bytes": 2689,
       "files": 2
     },
     {
       "path": "dist/claude/structure-serial-chapters.zip",
-      "sha256": "b2090e69fcd444ede3f23ffeb36720ddb28a1729654065d3a342b94445487cef",
-      "bytes": 2605,
+      "sha256": "f28f4b4034c691a4e104d74a35f31da0cc85ce6cc9d632d2e6fdca707b197c82",
+      "bytes": 2689,
       "files": 2
     },
     {
       "path": "dist/gemini/structure-serial-chapters.zip",
-      "sha256": "0d5380474d56785bfa6de235633624fbccfe999d46d89ef513764aa924de060a",
-      "bytes": 2501,
+      "sha256": "1506f8bc770167e273058ad45707ac2df6817582f38ce9e0902bdf7b259c1e07",
+      "bytes": 2585,
       "files": 2
     },
     {
