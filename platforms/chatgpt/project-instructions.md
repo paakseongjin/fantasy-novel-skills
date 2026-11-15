@@ -15,6 +15,10 @@
 - 판타지 전투·액션 설계: `design-fantasy-action.md`를 적용합니다.
 - 대사·인물별 말투 설계: `craft-character-dialogue.md`를 적용합니다.
 - 판타지 원고 편집·진단: `review-fantasy-manuscript.md`를 적용합니다.
+- 캐릭터·관계 애착 설계: `design-reader-attachment.md`를 적용합니다.
+- 초반 진입장벽 낮추기: `lower-opening-barrier.md`를 적용합니다.
+- 중후반 늘어짐·연재 피로 방지: `prevent-serial-drag.md`를 적용합니다.
+- 하차 위험 점검: `audit-dropout-risks.md`를 적용합니다.
 
 프로젝트용 단일 문서에는 지침과 참고 파일이 '자료: 파일명' 절로 함께 들어 있습니다. 지침의 참조 파일 열기 요청은 같은 문서의 해당 절을 읽는 것으로 해석하세요. 접근하지 못한 내용은 확인했다고 말하지 마세요.
 

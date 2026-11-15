@@ -4,7 +4,7 @@
 
 | 위치 | 역할 |
 |---|---|
-| skills/스킬명 | 기본 13개 SKILL.md와 참고 양식 |
+| skills/스킬명 | 기본 17개 SKILL.md와 참고 양식 |
 | skills/build-fantasy-world/references | 세계관 지침·예시의 단일 원본 |
 | config/worldbuilding-modules.json | 선택형 8개 본문과 포함할 참고 파일 목록 |
 | platforms/chatgpt/project-instructions.md | 프로젝트에 붙여 넣는 지침 |
@@ -30,8 +30,8 @@ python scripts/validate_repository.py
 - 각 독립 패키지 안의 참고 파일 존재와 상대 경로
 - ZIP 압축 해제 무결성 및 원본과의 바이트 일치
 - 플랫폼별 최상위 폴더 구조
-- 기본 13개·선택형 8개·ZIP 63개·프로젝트 문서 13개
-- 세계관 8개 예시 파일의 고유 번호와 총 216개; 새 장편 스킬의 독립 예시 28개는 별도
+- 기본 17개·선택형 8개·ZIP 75개·프로젝트 문서 17개
+- 세계관 8개 예시 파일의 고유 번호와 총 216개; 장편 스킬 예시 28개·웹소설 연재 스킬 예시 16개는 별도
 - 저장소 Markdown 상대 링크 대상 존재
 - 생성물의 재생성 일치와 SHA-256 manifest
 

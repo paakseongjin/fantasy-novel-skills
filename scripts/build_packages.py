@@ -15,6 +15,8 @@ PLATFORMS = ("chatgpt", "claude", "gemini")
 LONGFORM = ("plan-fantasy-longform", "design-character-arcs", "manage-fantasy-foreshadowing",
             "structure-serial-chapters", "design-fantasy-action", "craft-character-dialogue",
             "review-fantasy-manuscript")
+WEBNOVEL = ("design-reader-attachment", "lower-opening-barrier", "prevent-serial-drag",
+            "audit-dropout-risks")
 LINK = re.compile(r"\[([^\]]+)\]\(([^\s)]+)\)")
 
 
@@ -116,18 +118,19 @@ def project_document(name, payload):
     return "\n".join(parts).encode()
 
 
-def longform_bundle(outputs):
+def skill_bundle(outputs, names, title, date_time=(2026, 11, 15, 0, 0, 0)):
     entries = {}
     for platform in PLATFORMS:
-        for name in LONGFORM:
+        for name in names:
             entries[f"{platform}/{name}.zip"] = outputs[f"dist/{platform}/{name}.zip"]
-    for name in LONGFORM:
+    for name in names:
         entries[f"chatgpt-project/{name}.md"] = outputs[f"dist/chatgpt-project/{name}.md"]
     entries["chatgpt-project/project-instructions.md"] = (
         ROOT / "platforms/chatgpt/project-instructions.md").read_bytes()
+    count = len(names)
     entries["사용안내.txt"] = (
-        "장편 판타지 신규 스킬 7개\n\n이 묶음을 먼저 압축 해제하세요. chatgpt, claude, "
-        "gemini 폴더에는 해당 서비스별 개별 ZIP 7개가 들어 있습니다. 바깥 묶음 전체가 "
+        f"{title}\n\n이 묶음을 먼저 압축 해제하세요. chatgpt, claude, "
+        f"gemini 폴더에는 해당 서비스별 개별 ZIP {count}개가 들어 있습니다. 바깥 묶음 전체가 "
         "아니라 필요한 개별 ZIP을 각각 업로드하세요.\n\nChatGPT에서 스킬 업로드를 제공하지 "
         "않는 계정은 프로젝트 지침을 복사하고 chatgpt-project의 필요한 Markdown 문서를 "
         "프로젝트 자료에 추가하세요. 이 방식은 스킬 설치와 다릅니다.\n\n플랫폼의 제공 여부·"
@@ -137,7 +140,7 @@ def longform_bundle(outputs):
     buffer = io.BytesIO()
     with zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for path, content in sorted(entries.items()):
-            info = zipfile.ZipInfo(path, date_time=(2026, 11, 14, 0, 0, 0))
+            info = zipfile.ZipInfo(path, date_time=date_time)
             info.create_system = 3
             info.external_attr = 0o100644 << 16
             info.compress_type = zipfile.ZIP_DEFLATED
@@ -146,6 +149,15 @@ def longform_bundle(outputs):
         assert z.testzip() is None
         assert {p: z.read(p) for p in z.namelist()} == entries
     return buffer.getvalue()
+
+
+def longform_bundle(outputs):
+    return skill_bundle(
+        outputs, LONGFORM, "장편 판타지 신규 스킬 7개", date_time=(2026, 11, 14, 0, 0, 0))
+
+
+def webnovel_bundle(outputs):
+    return skill_bundle(outputs, WEBNOVEL, "웹소설 연재 점검 스킬 4개")
 
 
 def expected_outputs():
@@ -167,6 +179,7 @@ def expected_outputs():
               "live_platform_installation_tested": False}
     outputs["dist/manifest.json"] = (json.dumps(report, ensure_ascii=False, indent=2) + "\n").encode()
     outputs["downloads/fantasy-longform-seven-skills.zip"] = longform_bundle(outputs)
+    outputs["downloads/fantasy-webnovel-serial-skills.zip"] = webnovel_bundle(outputs)
     return outputs
 
 
@@ -190,7 +203,7 @@ def main():
     if errors:
         print("Stale, missing, or unexpected generated files:\n" + "\n".join(errors), file=sys.stderr)
         return 1
-    print(f"{'Verified' if args.check else 'Built'} 63 ZIPs, 13 project documents, and manifest.")
+    print(f"{'Verified' if args.check else 'Built'} 75 ZIPs, 17 project documents, and manifest.")
     return 0
 
 
