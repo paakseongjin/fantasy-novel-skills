@@ -10,8 +10,8 @@ from build_packages import ROOT, LINK, collect, expected_outputs
 def main():
     errors = []
     skills, core = collect()
-    if len(core) != 13 or len(skills) != 21:
-        errors.append("Expected 13 core and 8 optional skills")
+    if len(core) != 17 or len(skills) != 25:
+        errors.append("Expected 17 core and 8 optional skills")
     counts = {"world": ("W", 24), "names": ("N", 48), "magic": ("M", 24),
               "ranks": ("H", 24), "nations": ("C", 24), "peoples": ("P", 24),
               "religions": ("R", 24), "canon": ("A", 24)}
@@ -42,7 +42,7 @@ def main():
     if errors:
         print("\n".join(errors), file=sys.stderr)
         return 1
-    print("PASS: 21 skills, 63 ZIPs, 13 project documents, 216 example IDs, references and links.")
+    print("PASS: 25 skills, 75 ZIPs, 17 project documents, 216 example IDs, references and links.")
     print("Live platform installation/model execution: not tested.")
     return 0
 

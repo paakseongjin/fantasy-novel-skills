@@ -45,3 +45,7 @@ audit-fantasy-canon으로 아래 자료만 감사해 줘.
 ## 장편 설계와 회차 연재 확장
 
 작품 전체의 인과는 [장편 플롯](plan-fantasy-longform.md), 장기 인물 변화는 [인물 성장](design-character-arcs.md), 복선과 반전은 [복선 관리](manage-fantasy-foreshadowing.md), 회차 간 리듬은 [회차 구성](structure-serial-chapters.md)을 적용합니다. 필요하면 [전투](design-fantasy-action.md)와 [대사](craft-character-dialogue.md)를 집중 설계하고 [원고 진단](review-fantasy-manuscript.md)으로 독자의 이해와 구조를 점검합니다. 정전 충돌의 근거 확인은 기존 감사와 나누어 중복을 피합니다.
+
+## 웹소설 연재 점검
+
+독자 애착은 [애착 설계](design-reader-attachment.md), 초반 이탈은 [진입장벽](lower-opening-barrier.md), 중후반 정체·연재 피로는 [늘어짐 방지](prevent-serial-drag.md), 종합 우선순위는 [하차 위험 점검](audit-dropout-risks.md)을 적용합니다. 떡밥 회수는 기존 복선 관리로 충분하므로 새 스킬을 만들지 않았습니다. 같은 구간을 여러 스킬로 반복 진단하지 않습니다.

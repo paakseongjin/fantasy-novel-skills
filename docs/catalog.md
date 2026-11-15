@@ -6,7 +6,9 @@ ZIP 링크를 연 뒤 GitHub 다운로드 버튼으로 저장하세요. 저장�
 
 **장편 창작 신규 7개만 한 번에 받기:** [장편 스킬 묶음 ZIP](../downloads/fantasy-longform-seven-skills.zip). 묶음을 먼저 풀고 사용할 서비스 폴더의 개별 ZIP을 각각 업로드합니다. ChatGPT 프로젝트용 문서와 지침도 묶음에 포함됩니다.
 
-## 기본 스킬 13개
+**웹소설 연재 점검 4개만 한 번에 받기:** [웹소설 연재 스킬 묶음 ZIP](../downloads/fantasy-webnovel-serial-skills.zip). 묶음을 먼저 풀고 서비스별 개별 ZIP을 각각 업로드합니다.
+
+## 기본 스킬 17개
 
 | 이름 | 담당 작업 | ChatGPT | Claude | Gemini |
 |---|---|---|---|---|
@@ -24,6 +26,10 @@ ZIP 링크를 연 뒤 GitHub 다운로드 버튼으로 저장하세요. 저장�
 | `design-fantasy-action` | [판타지 전투·액션 설계](design-fantasy-action.md) | [ZIP](../dist/chatgpt/design-fantasy-action.zip) | [ZIP](../dist/claude/design-fantasy-action.zip) | [ZIP](../dist/gemini/design-fantasy-action.zip) |
 | `craft-character-dialogue` | [대사·인물별 말투 설계](craft-character-dialogue.md) | [ZIP](../dist/chatgpt/craft-character-dialogue.zip) | [ZIP](../dist/claude/craft-character-dialogue.zip) | [ZIP](../dist/gemini/craft-character-dialogue.zip) |
 | `review-fantasy-manuscript` | [판타지 원고 편집·진단](review-fantasy-manuscript.md) | [ZIP](../dist/chatgpt/review-fantasy-manuscript.zip) | [ZIP](../dist/claude/review-fantasy-manuscript.zip) | [ZIP](../dist/gemini/review-fantasy-manuscript.zip) |
+| `design-reader-attachment` | [캐릭터·관계 애착 설계](design-reader-attachment.md) | [ZIP](../dist/chatgpt/design-reader-attachment.zip) | [ZIP](../dist/claude/design-reader-attachment.zip) | [ZIP](../dist/gemini/design-reader-attachment.zip) |
+| `lower-opening-barrier` | [초반 진입장벽 낮추기](lower-opening-barrier.md) | [ZIP](../dist/chatgpt/lower-opening-barrier.zip) | [ZIP](../dist/claude/lower-opening-barrier.zip) | [ZIP](../dist/gemini/lower-opening-barrier.zip) |
+| `prevent-serial-drag` | [중후반 늘어짐·연재 피로 방지](prevent-serial-drag.md) | [ZIP](../dist/chatgpt/prevent-serial-drag.zip) | [ZIP](../dist/claude/prevent-serial-drag.zip) | [ZIP](../dist/gemini/prevent-serial-drag.zip) |
+| `audit-dropout-risks` | [하차 위험 점검](audit-dropout-risks.md) | [ZIP](../dist/chatgpt/audit-dropout-risks.zip) | [ZIP](../dist/claude/audit-dropout-risks.zip) | [ZIP](../dist/gemini/audit-dropout-risks.zip) |
 
 ChatGPT 스킬 메뉴가 없으면 [프로젝트 지침](../platforms/chatgpt/project-instructions.md)과 [프로젝트용 단일 문서](../dist/chatgpt-project)를 사용하세요.
 
