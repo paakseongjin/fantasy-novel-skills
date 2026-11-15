@@ -10,21 +10,29 @@ from build_packages import ROOT, LINK, collect, expected_outputs
 def main():
     errors = []
     skills, core = collect()
-    if len(core) != 17 or len(skills) != 25:
-        errors.append("Expected 17 core and 8 optional skills")
+    if len(core) != 18 or len(skills) != 26:
+        errors.append("Expected 17 creative skills, 1 router, and 8 optional skills")
+    router = "route-fantasy-writing"
+    catalog = (ROOT / f"skills/{router}/references/skill-catalog.md").read_text(encoding="utf-8")
+    targets = re.findall(r"^\| `([a-z0-9-]+)` \|", catalog, re.M)
+    if len(targets) != len(set(targets)) or set(targets) != set(skills) - {router}:
+        errors.append("Router catalog has missing, unknown, or duplicate skill targets")
+    for guide in re.findall(r"`(references/[a-z-]+\.md)`", catalog):
+        if guide not in skills["build-fantasy-world"]:
+            errors.append(f"Router worldbuilding fallback does not exist: {guide}")
     counts = {"world": ("W", 24), "names": ("N", 48), "magic": ("M", 24),
               "ranks": ("H", 24), "nations": ("C", 24), "peoples": ("P", 24),
               "religions": ("R", 24), "canon": ("A", 24)}
     for topic, (prefix, count) in counts.items():
         source = ROOT / f"skills/build-fantasy-world/references/{topic}-examples.md"
-        ids = re.findall(r"^\| (" + prefix + r"\d{2})\b", source.read_text(), re.M)
+        ids = re.findall(r"^\| (" + prefix + r"\d{2})\b", source.read_text(encoding="utf-8"), re.M)
         expected = [f"{prefix}{i:02}" for i in range(1, count + 1)]
         if ids != expected:
             errors.append(f"Missing, duplicate, or unordered IDs: {source.name}")
     for file in ROOT.rglob("*.md"):
         if ".git" in file.parts:
             continue
-        for _, target in LINK.findall(file.read_text()):
+        for _, target in LINK.findall(file.read_text(encoding="utf-8")):
             if target.startswith(("http://", "https://", "mailto:", "#")):
                 continue
             path = unquote(target.split("#", 1)[0])
@@ -42,7 +50,9 @@ def main():
     if errors:
         print("\n".join(errors), file=sys.stderr)
         return 1
-    print("PASS: 25 skills, 75 ZIPs, 17 project documents, 216 example IDs, references and links.")
+    zip_count = sum(p.startswith("dist/") and p.endswith(".zip") for p in outputs)
+    print(f"PASS: {len(skills)} skills, {zip_count} ZIPs, {len(core)} project documents, "
+          "216 example IDs, router targets, references and links.")
     print("Live platform installation/model execution: not tested.")
     return 0
 

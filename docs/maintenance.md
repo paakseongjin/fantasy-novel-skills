@@ -4,7 +4,7 @@
 
 | 위치 | 역할 |
 |---|---|
-| skills/스킬명 | 기본 17개 SKILL.md와 참고 양식 |
+| skills/스킬명 | 기본 창작 17개 + 라우터 1개의 SKILL.md와 참고 자료 |
 | skills/build-fantasy-world/references | 세계관 지침·예시의 단일 원본 |
 | config/worldbuilding-modules.json | 선택형 8개 본문과 포함할 참고 파일 목록 |
 | platforms/chatgpt/project-instructions.md | 프로젝트에 붙여 넣는 지침 |
@@ -26,11 +26,14 @@ python scripts/validate_repository.py
 
 ## 검증하는 항목
 
+Markdown 원본은 UTF-8로 읽고 줄바꿈을 LF로 통일해 Windows 체크아웃에서도 동일한 내용을 패키징합니다. 라우터의 실제 모델 행동 확인에는 [수동 검증 시나리오](route-fantasy-writing.md#실행-시-확인할-사례)를 사용합니다.
+
 - 스킬명 형식·길이, 설명 길이, 필수 메타데이터
 - 각 독립 패키지 안의 참고 파일 존재와 상대 경로
 - ZIP 압축 해제 무결성 및 원본과의 바이트 일치
 - 플랫폼별 최상위 폴더 구조
-- 기본 17개·선택형 8개·ZIP 75개·프로젝트 문서 17개
+- 기본 창작 17개·라우터 1개·선택형 8개·ZIP 78개·프로젝트 문서 18개
+- 라우터 선택표의 대상 25개와 실제 스킬 집합 일치, 세계관 대체 자료 경로
 - 세계관 8개 예시 파일의 고유 번호와 총 216개; 장편 스킬 예시 28개·웹소설 연재 스킬 예시 16개는 별도
 - 저장소 Markdown 상대 링크 대상 존재
 - 생성물의 재생성 일치와 SHA-256 manifest

@@ -14,6 +14,7 @@
     "prevent-serial-drag",
     "refine-natural-korean",
     "review-fantasy-manuscript",
+    "route-fantasy-writing",
     "structure-serial-chapters",
     "write-character-conflict",
     "write-fantasy-prose",
@@ -29,7 +30,7 @@
     "design-fantasy-world",
     "name-fantasy-world"
   ],
-  "zip_count": 75,
+  "zip_count": 78,
   "packages": [
     {
       "path": "dist/chatgpt/audit-dropout-risks.zip",
@@ -408,6 +409,24 @@
       "sha256": "d475f59134b96fc5175d676e3b76aec811cddf53e4d2f25a925ef8931a44af9c",
       "bytes": 2664,
       "files": 2
+    },
+    {
+      "path": "dist/chatgpt/route-fantasy-writing.zip",
+      "sha256": "8e1dc469a2e4f72a7a1ecdbec15f747acb0bb117573c7083c9ec3cb7e7c7b27f",
+      "bytes": 8503,
+      "files": 3
+    },
+    {
+      "path": "dist/claude/route-fantasy-writing.zip",
+      "sha256": "8e1dc469a2e4f72a7a1ecdbec15f747acb0bb117573c7083c9ec3cb7e7c7b27f",
+      "bytes": 8503,
+      "files": 3
+    },
+    {
+      "path": "dist/gemini/route-fantasy-writing.zip",
+      "sha256": "fc08824d3754b353490ffbec43b53ff9cf3d908d528ba95bd71d79e25c6eca36",
+      "bytes": 8371,
+      "files": 3
     },
     {
       "path": "dist/chatgpt/structure-serial-chapters.zip",

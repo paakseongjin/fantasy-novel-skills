@@ -63,11 +63,11 @@ def collect():
     for folder in sorted((ROOT / "skills").iterdir()):
         if not folder.is_dir():
             continue
-        skills[folder.name] = {str(p.relative_to(folder)).replace("\\", "/"): p.read_bytes()
+        skills[folder.name] = {str(p.relative_to(folder)).replace("\\", "/"): p.read_text(encoding="utf-8").encode()
                                for p in sorted(folder.rglob("*.md"))}
     core_names = set(skills)
     shared = ROOT / "skills/build-fantasy-world/references"
-    modules = json.loads((ROOT / "config/worldbuilding-modules.json").read_text())
+    modules = json.loads((ROOT / "config/worldbuilding-modules.json").read_text(encoding="utf-8"))
     for item in modules:
         name = item["name"]
         if name in skills:
@@ -76,7 +76,7 @@ def collect():
         for filename in item["references"]:
             if Path(filename).name != filename:
                 raise ValueError(f"Invalid reference: {filename}")
-            skills[name][f"references/{filename}"] = (shared / filename).read_bytes()
+            skills[name][f"references/{filename}"] = (shared / filename).read_text(encoding="utf-8").encode()
     for name, payload in skills.items():
         check_payload(name, payload)
     return dict(sorted(skills.items())), core_names
@@ -126,7 +126,7 @@ def skill_bundle(outputs, names, title, date_time=(2026, 11, 15, 0, 0, 0)):
     for name in names:
         entries[f"chatgpt-project/{name}.md"] = outputs[f"dist/chatgpt-project/{name}.md"]
     entries["chatgpt-project/project-instructions.md"] = (
-        ROOT / "platforms/chatgpt/project-instructions.md").read_bytes()
+        ROOT / "platforms/chatgpt/project-instructions.md").read_text(encoding="utf-8").encode()
     count = len(names)
     entries["사용안내.txt"] = (
         f"{title}\n\n이 묶음을 먼저 압축 해제하세요. chatgpt, claude, "
@@ -203,7 +203,9 @@ def main():
     if errors:
         print("Stale, missing, or unexpected generated files:\n" + "\n".join(errors), file=sys.stderr)
         return 1
-    print(f"{'Verified' if args.check else 'Built'} 75 ZIPs, 17 project documents, and manifest.")
+    zip_count = sum(p.startswith("dist/") and p.endswith(".zip") for p in outputs)
+    doc_count = sum(p.startswith("dist/chatgpt-project/") for p in outputs)
+    print(f"{'Verified' if args.check else 'Built'} {zip_count} ZIPs, {doc_count} project documents, and manifest.")
     return 0
 
 

@@ -8,6 +8,14 @@ ZIP 링크를 연 뒤 GitHub 다운로드 버튼으로 저장하세요. 저장�
 
 **웹소설 연재 점검 4개만 한 번에 받기:** [웹소설 연재 스킬 묶음 ZIP](../downloads/fantasy-webnovel-serial-skills.zip). 묶음을 먼저 풀고 서비스별 개별 ZIP을 각각 업로드합니다.
 
+## 조합·라우팅 스킬 1개
+
+| 이름 | 담당 작업 | ChatGPT | Claude | Gemini |
+|---|---|---|---|---|
+| `route-fantasy-writing` | [자연어 요청의 스킬 선택·순서·인계](route-fantasy-writing.md) | [ZIP](../dist/chatgpt/route-fantasy-writing.zip) | [ZIP](../dist/claude/route-fantasy-writing.zip) | [ZIP](../dist/gemini/route-fantasy-writing.zip) |
+
+기본 17개 + 라우터 1개 + 선택형 8개로 총 26개입니다. 라우터는 다른 스킬을 자동 설치하지 않습니다.
+
 ## 기본 스킬 17개
 
 | 이름 | 담당 작업 | ChatGPT | Claude | Gemini |
