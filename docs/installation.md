@@ -1,88 +1,74 @@
-# 설치 및 사용: ChatGPT · Claude · Gemini
+# 설치 및 사용: Gemini · Claude · ChatGPT
 
-공식 안내 확인일: **2026-11-14**. 웹에서 등록한 뒤 사용하는 절차를 기준으로 합니다. 계정·워크스페이스·앱에 따라 메뉴와 동기화 범위가 다릅니다. 실제 사용자 계정에 설치한 결과를 보증하는 문서는 아닙니다.
+[가이드 홈](index.md) · [빠른 시작](quickstart.md) · [다운로드](catalog.md)
+
+공식 안내 확인일: **2026-11-15**. 이 문서는 웹 화면의 등록 절차를 기준으로 합니다. 계정·워크스페이스·앱 버전에 따라 표시되는 메뉴가 다를 수 있습니다.
 
 ## 1. 파일 내려받기
 
-장편 창작 신규 7개만 필요하다면 [장편 스킬 묶음](../downloads/fantasy-longform-seven-skills.zip)을 내려받을 수 있습니다. 웹소설 연재 점검 4개만 필요하다면 [웹소설 연재 스킬 묶음](../downloads/fantasy-webnovel-serial-skills.zip)을 사용하세요. 바깥 ZIP을 풀어 서비스별 개별 ZIP을 각각 등록하세요. 프로젝트용 문서도 포함됩니다.
-
-1. 로그인한 GitHub에서 이 저장소를 엽니다. 비공개 저장소 접근 권한이 필요합니다.
-2. **Code → Download ZIP**으로 저장소 전체를 내려받아 풉니다. 저장소 ZIP 자체는 스킬 업로드 파일이 아닙니다.
-3. [스킬 목록](catalog.md)에서 필요한 스킬을 고르고, 서비스에 맞는 `dist` 폴더의 **개별 ZIP**을 선택합니다. 개별 ZIP은 다시 압축하지 않습니다.
-4. 기본 창작 스킬은 17개이며 [조합·라우팅 스킬](route-fantasy-writing.md) 1개를 추가할 수 있습니다. 세계관 통합형 대신 분야별 8개 중 필요한 것만 골라도 됩니다.
-
-| 서비스/방식 | 파일 | 패키지 구조 |
+| 사용하는 환경 | 선택할 파일 | 이 저장소의 파일 구조 |
 |---|---|---|
-| ChatGPT 스킬 업로드 메뉴가 있는 계정 | [dist/chatgpt](../dist/chatgpt) | 스킬명 폴더 안에 SKILL.md와 참고 파일 |
-| ChatGPT 프로젝트 방식 | [프로젝트 지침](../platforms/chatgpt/project-instructions.md) + [단일 문서](../dist/chatgpt-project) | 지침 복사 + Markdown 업로드 |
-| Claude 사용자 지정 스킬 | [dist/claude](../dist/claude) | 스킬명 폴더 안에 SKILL.md와 참고 파일 |
-| Gemini Apps 스킬 | [dist/gemini](../dist/gemini) | ZIP 최상위에 SKILL.md와 references |
+| Gemini Apps | [dist/gemini](../dist/gemini)의 개별 ZIP | ZIP 루트에 `SKILL.md`, 필요하면 `references/` |
+| Claude | [dist/claude](../dist/claude)의 개별 ZIP | 스킬명 폴더 안에 `SKILL.md`와 참고 자료 |
+| ChatGPT Skills | [dist/chatgpt](../dist/chatgpt)의 개별 ZIP | 스킬명 폴더 안에 `SKILL.md`와 참고 자료 |
+| ChatGPT 프로젝트 | [프로젝트 지침](../platforms/chatgpt/project-instructions.md) + [단일 문서](../dist/chatgpt-project) | 지침 복사와 문서 업로드 |
 
-## 2. ChatGPT
+개별 ZIP은 [스킬 목록](catalog.md)의 링크를 열어 내려받습니다. **Code → Download ZIP**으로 저장소 전체를 받았다면 압축을 풀고 `dist`에서 개별 ZIP을 찾으세요. [장편 7개 묶음](../downloads/fantasy-longform-seven-skills.zip)과 [연재 점검 4개 묶음](../downloads/fantasy-webnovel-serial-skills.zip)도 먼저 풀어야 합니다. 바깥 묶음은 등록 파일이 아닙니다.
 
-### 스킬 업로드 메뉴가 있는 경우
+## 2. Gemini Apps
 
-OpenAI 도움말은 대상 Business·Enterprise·Healthcare·Edu 계정에서의 제공을 설명합니다. 모든 개인 요금제와 앱에서 동일하게 제공된다고 가정하지 마세요.
+Google 공식 안내는 스킬의 자동 적용과 여러 스킬의 조합을 지원하며, 스킬 지침에서 다른 스킬을 참조할 수 있다고 설명합니다. [공식 도움말](https://support.google.com/gemini/answer/17094296?hl=en)
 
-1. 사이드바 **Plugins → Skills → Create → Upload from your computer**를 엽니다.
-2. `dist/chatgpt/<스킬명>.zip`을 선택하고 화면의 등록 절차를 완료합니다.
-3. 새 대화에서 스킬 이름과 작업을 명시하고 아래 확인 예제로 동작을 점검합니다.
+1. 웹 사이드바에서 **Customize → Skills**를 엽니다. Customize가 보이지 않으면 More를 확인합니다.
+2. **Create → Upload**를 선택하고 Gemini용 개별 ZIP을 업로드합니다.
+3. 이름·설명·지침과 참고 자료를 확인한 뒤 **Create**로 등록합니다.
+4. 활성화 상태를 확인하고 새 대화에서 스킬 이름과 작업을 명시합니다. `/` 또는 갱신된 화면의 `@`로 선택할 수도 있습니다.
 
-ChatGPT ZIP은 표준 SKILL.md 폴더를 묶은 배포물입니다. 공식 도움말은 업로드 메뉴를 안내하지만 이 ZIP을 실제 계정에서 시험한 것은 아닙니다. 파일 선택창에서 ZIP을 받지 않으면 압축을 풀어 제공되는 폴더 업로드/편집 방식으로 등록하거나 아래 프로젝트 방식을 사용하세요. 다른 OpenAI 제품에서의 설치가 웹·앱에 자동 동기화된다고 가정하지 않습니다.
+성인 계정이 필요합니다. Keep Activity를 끈 상태에서도 스킬 자체는 사용할 수 있으며, 연결 앱 기능의 이용 조건은 별개입니다. 이 팩의 기본 집필 작업은 대화에 제공한 자료로 수행할 수 있습니다.
 
-### 스킬 메뉴가 없는 경우: 프로젝트 지침·자료
-
-1. 새 프로젝트를 만들고 프로젝트 지침을 엽니다.
-2. [project-instructions.md](../platforms/chatgpt/project-instructions.md) 본문을 붙여 넣고 저장합니다.
-3. `dist/chatgpt-project`의 필요한 `.md` 파일을 자료에 올립니다. 처음에는 `build-fantasy-world.md`, `write-fantasy-prose.md`, `audit-fantasy-canon.md`부터 시작해도 됩니다.
-4. 원고·확정 설정·연표는 작품명과 버전을 표시한 별도 자료로 추가합니다.
-5. 프로젝트 안에서 `build-fantasy-world 자료의 명칭 지침을 적용해…`처럼 요청합니다.
-
-단일 문서에는 스킬 본문과 참고 파일이 함께 들어 있습니다. 같은 이름의 SKILL.md 여러 개를 올리거나 상대 폴더 경로를 재현할 필요가 없습니다. 이 방식은 네이티브 설치와 별개이며 자동 호출·모든 자료의 완전한 열람을 보장하지 않습니다. 웹·앱에서 같은 프로젝트를 열어 자료가 보이는지 확인하세요.
+기존 창작 스킬 17개를 등록했다면 [라우터 ZIP](../dist/gemini/route-fantasy-writing.zip)만 추가할 수 있습니다. 같은 이름이 이미 있으면 해당 스킬의 **More → Replace skill**로 교체하세요. 참고 파일을 변경할 때는 전체 스킬을 다시 업로드합니다.
 
 ## 3. Claude
 
-1. 설정 **Capabilities**에서 코드 실행·파일 생성 기능을 활성화합니다. 이 팩에 실행 코드는 없지만 Claude 스킬 기능에는 해당 설정이 요구됩니다.
-2. **Customize → Skills**에서 추가/생성 → 스킬 업로드를 선택합니다.
-3. `dist/claude/<스킬명>.zip`을 업로드하고 활성화합니다. ZIP 안의 첫 폴더가 스킬명이고 그 안에 SKILL.md가 있습니다.
-4. 새 대화에서 스킬 이름을 지정해 요청하고 작품별 정전·원고도 제공합니다.
-5. 앱에 등록 메뉴가 없으면 웹에서 진행한 뒤, 사용할 앱에서 스킬이 보이고 적용되는지 확인합니다.
+Claude는 사용자 지정 스킬 폴더를 ZIP으로 업로드하는 방식을 안내합니다. 코드 실행·파일 생성 기능과 조직의 스킬 이용 설정을 먼저 확인합니다. [사용 안내](https://support.claude.com/en/articles/12512180-use-skills-in-claude) · [패키지 구조](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
 
-## 4. Gemini Apps
+1. 개인 계정은 **Settings → Capabilities**에서 코드 실행·파일 생성을 켭니다. 갱신된 설정에서는 **Create and edit files**로 표시될 수 있습니다.
+2. **Customize → Skills**에서 추가 버튼 → **Create skill → Upload a skill**을 선택합니다.
+3. Claude용 개별 ZIP을 업로드합니다. ZIP 안의 스킬명 폴더에 `SKILL.md`가 있어야 합니다.
+4. 목록에서 활성화한 뒤 스킬 이름을 지정해 작은 작업을 요청합니다.
 
-1. 성인 계정으로 로그인한 뒤 웹의 **Customize → Skills → Create → Upload**를 엽니다. Customize가 없으면 More를 확인합니다.
-2. `dist/gemini/<스킬명>.zip`을 업로드합니다. ZIP 최상위에 SKILL.md가 있습니다.
-3. 내용을 검토하고 Create로 등록합니다.
-4. 대화에서 `/` 또는 갱신된 단축키 `@`로 스킬을 선택하거나 이름을 명시해 요청합니다.
-5. 참고 자료를 수정했으면 참고 파일이 포함된 전체 스킬을 다시 업로드합니다.
+Team·Enterprise에서는 조직 정책에 따라 생성·업로드 또는 코드 실행이 제한될 수 있습니다. 메뉴가 없거나 비활성 상태면 계정 설정과 조직 권한을 확인하세요. 스킬이 활성화되어도 실제 요청 결과는 검토해야 합니다.
 
-Google은 웹·모바일·Mac 앱의 스킬을 안내합니다. **Keep Activity를 꺼도 스킬은 사용할 수 있습니다.** 다만 이에 의존하는 Connected Apps 기능은 제한됩니다. 이 팩은 외부 연결 없이 작동하는 Markdown 지침·예시입니다.
+## 4. ChatGPT
+
+### Skills 메뉴가 제공되는 계정
+
+공식 도움말은 대상 Business·Enterprise·Healthcare·Edu 사용자의 이용을 안내하며, 워크스페이스 설정과 제공 여부에 따라 접근이 달라집니다. [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
+
+1. 사이드바 **Plugins → Skills**로 이동합니다.
+2. **Create → Upload from your computer**를 엽니다.
+3. 업로드 화면에서 지원하는 방식으로 ChatGPT용 파일을 등록합니다. ZIP을 받지 않는 화면에서는 압축을 풀고 제공되는 파일·폴더 또는 편집 방식을 따릅니다.
+4. 업로드 검사와 등록 상태를 확인한 뒤 스킬 이름을 지정해 요청합니다. 선택 메뉴가 있으면 `@`로 지정할 수 있습니다. [스킬 사용·형식 안내](https://learn.chatgpt.com/docs/build-skills)
+
+이 저장소의 ZIP 구조 검사와 실제 ChatGPT 업로드 수용 여부는 별개의 확인 항목입니다. 검사에서 검토 필요나 차단으로 표시되면 화면의 사유를 확인하세요.
+
+### 프로젝트에 자료로 추가하는 방식
+
+스킬 메뉴가 없다면 프로젝트의 지침·자료 기능을 사용할 수 있습니다. 프로젝트에서 사용할 수 있는 기능과 파일 수는 계정 설정에 따릅니다. [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)
+
+1. 새 프로젝트를 만들고 [프로젝트 지침](../platforms/chatgpt/project-instructions.md)을 지침 칸에 붙여 넣습니다.
+2. [프로젝트용 문서](../dist/chatgpt-project)에서 필요한 `.md` 파일을 자료로 추가합니다.
+3. 작품의 설정집과 원고를 별도 자료로 추가합니다.
+4. “업로드한 write-fantasy-prose.md 자료를 적용해…”처럼 요청합니다.
+
+단일 문서 안에는 원본 지침과 참고 자료가 함께 있습니다. 상대 경로의 파일을 읽으라는 지시는 해당 문서의 같은 이름을 가진 자료 절을 참고한다는 뜻입니다. 선택형 세계관 8개의 프로젝트 문서는 별도로 생성하지 않으므로 통합형 문서의 관련 분야를 이용하세요.
+
+이 방식은 네이티브 스킬 등록이 아닙니다. 라우터 문서를 사용할 때도 다른 전문 지침을 프로젝트에 제공해야 합니다.
 
 ## 5. 설치 확인과 갱신
 
-기존 창작 스킬 등록을 마쳤고 자연어 요청에 따라 조합하고 싶다면 [route-fantasy-writing](route-fantasy-writing.md)을 추가하세요. 특정 작품·외부 저장 공간 연결 없이 사용할 수 있습니다. 새 라우터만 등록하면 되며 기존 창작 스킬 파일은 이번 추가로 변경되지 않았습니다.
+등록 후 [빠른 시작의 확인 예제](quickstart.md)를 실행합니다. 목록에 이름이 표시되는지, 필요한 참고 자료가 읽히는지, 결과가 요청 조건을 지키는지를 따로 확인하세요.
 
-```text
-audit-fantasy-canon을 적용해 다음을 검토해 줘.
-확정 설정: 마법 한 번에 기억 하나를 소모한다.
-원고: 주인공은 아무 대가 없이 마법을 사용했다.
-충돌 후보의 두 근거와 확인해야 할 예외를 제시해 줘.
-새 예외를 만들어 확정하지 마.
-```
+GitHub 파일은 등록된 스킬에 자동 동기화되지 않습니다. 새 ZIP으로 해당 서비스의 교체 절차를 따르고, 프로젝트 방식에서는 이전 문서와 새 문서가 혼재하지 않게 정리합니다. 구체적인 교체·복구 순서는 [업데이트 안내](versions.md)에 있습니다.
 
-```text
-refine-natural-korean을 적용해 다음 문장을 다듬어 줘.
-“그는 문을 열 수 있었다. 그러나 끝내 손잡이에 손을 대지 않았다.”
-가능성을 실제 행동으로 바꾸지 말고 수정한 본문만 출력해 줘.
-```
-
-GitHub 변경은 설치된 스킬에 자동 반영되지 않습니다. 최신 파일을 내려받아 기존 항목의 갱신 절차를 따르고 중복 활성화를 피하세요. 프로젝트 방식은 기존 자료를 최신 `.md`로 교체합니다. 작품 정전·원고는 별도로 관리합니다.
-
-## 공식 자료
-
-- [OpenAI: Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
-- [OpenAI: Build skills](https://learn.chatgpt.com/docs/build-skills)
-- [OpenAI: Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)
-- [Anthropic: Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
-- [Anthropic: How to create custom skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
-- [Google: Create & manage skills for Gemini Apps](https://support.google.com/gemini/answer/17094296?hl=en)
+등록이 안 되거나 호출되지 않으면 [문제 해결](troubleshooting.md)을 확인하세요. 서비스 제공 조건의 근거와 이 저장소의 검증 범위는 [공식 자료](sources.md)와 [패키지 검증](maintenance.md)에 정리되어 있습니다.
