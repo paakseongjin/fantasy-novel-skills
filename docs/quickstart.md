@@ -17,11 +17,11 @@
 
 ## 2. 서비스에 맞는 파일을 받으세요
 
-[다운로드 목록](catalog.md)에서 선택한 스킬의 Gemini·Claude·ChatGPT ZIP을 엽니다. GitHub 파일 화면의 다운로드 버튼으로 저장합니다. 비공개 저장소라면 접근 권한이 있는 계정으로 로그인해야 합니다.
+[다운로드 목록](catalog.md)에서 선택한 스킬의 서비스별 ZIP을 엽니다. GitHub 파일 화면의 다운로드 버튼으로 저장합니다.
 
-저장소 전체를 받았다면 먼저 압축을 풀고 `dist/사용할 서비스/스킬명.zip`을 찾으세요. 등록할 파일은 이 **개별 ZIP**입니다. 서비스별 절차는 [설치 안내](installation.md)에 있습니다.
+저장소 전체를 받았다면 먼저 압축을 풀고 `dist/사용할 서비스/스킬명.zip`을 찾으세요. Gemini와 Claude는 이 개별 ZIP을 업로드합니다. ChatGPT Skills는 계정의 업로드 기능과 지원 형식을 확인하세요. [서비스별 설치 안내](installation.md)
 
-ChatGPT에 Skills 메뉴가 없으면 프로젝트에 [프로젝트 지침](../platforms/chatgpt/project-instructions.md)과 해당 [단일 문서](../dist/chatgpt-project)를 추가할 수 있습니다.
+ChatGPT 프로젝트를 사용한다면 프로젝트 설정에 [프로젝트 지침](../platforms/chatgpt/project-instructions.md)을 붙여 넣고, 필요한 [프로젝트용 문서](../dist/chatgpt-project)를 소스로 추가합니다.
 
 ## 3. 첫 요청을 보내세요
 
@@ -33,10 +33,10 @@ refine-natural-korean을 적용해 아래 문장을 다듬어 줘.
 유지할 것: 문을 열 수 있었지만 실제로는 열지 않았다는 의미.
 출력: 수정 본문만.
 
-그는 문을 열 수 있었다. 그러나 끝내 손잡이에 손을 대지 않았다.
+그는 그 문을 개방하는 것이 가능했으나 끝내 손잡이에 손을 대지 않았다.
 ```
 
-프로젝트 자료 방식에서는 첫 문장을 “업로드한 refine-natural-korean.md 자료를 적용해”로 바꾸세요.
+명시적 선택은 [서비스별 안내](installation.md)를 따릅니다. 프로젝트 자료 방식에서는 첫 문장을 “업로드한 refine-natural-korean.md 자료를 적용해”로 바꾸세요.
 
 ## 4. 결과를 확인하세요
 

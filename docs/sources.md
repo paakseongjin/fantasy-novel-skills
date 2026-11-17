@@ -2,7 +2,7 @@
 
 [가이드 홈](index.md) · [설치 안내](installation.md) · [검증 범위](maintenance.md)
 
-기능·설치 안내 확인일: **2026-11-15**. 서비스 기능의 근거와 이 저장소가 설계한 창작 절차를 구분합니다. 이 가이드는 각 제공사의 공식 매뉴얼을 번역·대체하거나 제품의 인증을 표시하는 문서가 아닙니다.
+**2026-11-17**에 서비스 기능과 설치 경로를 확인했습니다. 아래 공식 문서는 제품 동작의 근거이며, 각 창작 스킬의 선택과 실행 순서는 이 저장소에서 설계했습니다.
 
 ## 서비스와 스킬 형식의 공식 근거
 
@@ -10,11 +10,12 @@
 |---|---|---|
 | [Google: Gemini Apps 스킬](https://support.google.com/gemini/answer/17094296?hl=en) | 파일 업로드, 활성화·자동 적용, 다른 스킬 참조, 교체 | Gemini Apps. CLI의 명령과 구분 |
 | [Anthropic: Claude 스킬 사용](https://support.claude.com/en/articles/12512180-use-skills-in-claude) | 코드 실행·파일 생성, 업로드와 활성화 | 계정·조직 설정 확인 |
-| [Anthropic: 사용자 지정 스킬 작성](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills) | 스킬 폴더를 포함하는 ZIP 구조 | Claude용 패키지 구성 |
-| [OpenAI: Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) | 이용 대상, Skills 메뉴와 업로드 검사 | 제공 계정·워크스페이스에 한함 |
-| [OpenAI: Build skills](https://learn.chatgpt.com/docs/build-skills) | 이름·설명·지침 구조와 명시적·자동 선택 | 제품별 호출 방식 구분 |
+| [Anthropic: 사용자 지정 스킬 작성](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills) | 스킬 폴더를 포함하는 ZIP, 모델의 여러 스킬 자동 선택 | 스킬이 다른 스킬을 직접 호출하는 방식은 지원되지 않음 |
+| [OpenAI: Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) | 이용 대상, Skills 메뉴와 업로드 검사 | 대상 계정·워크스페이스. 업로드 수용 형식은 화면에서 확인 |
+| [OpenAI: Build skills](https://learn.chatgpt.com/docs/build-skills) | 이름·설명·지침 구조, ChatGPT의 `@` 선택 | Codex의 호출 방법은 문서에서 별도로 설명 |
 | [OpenAI: Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt) | 프로젝트 지침과 파일 자료 | 네이티브 스킬과 별도 방식 |
-| [GitHub: Copilot Agent Skills](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills) | SKILL.md와 메타데이터, 보조 자료, 요청에 따른 선택 | 공통 형식 참고. 저장소 skills/를 자동 설치 경로로 간주하지 않음 |
+| [GitHub: 소스 아카이브 다운로드](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives) | Code → Download ZIP은 선택한 브랜치의 저장소 스냅샷 | 압축을 푼 뒤 `dist/`에서 개별 파일 선택 |
+| [GitHub: Copilot CLI Agent Skills](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills) | `SKILL.md` 구조와 Copilot CLI의 스킬 검색 경로 | 이 저장소에서 `skills/`는 배포용 원본 위치. Copilot CLI의 기본 프로젝트 검색 위치는 `.github/skills/`, `.claude/skills/`, `.agents/skills/` |
 | [Agent Skills 규격](https://agentskills.io/specification) | 이름·설명·참조 구조와 단계적 자료 읽기 | 플랫폼별 세부 수용 여부는 별도 확인 |
 
 문서의 등록 단계는 위 자료를 기준으로 작성했습니다. 정확한 노출 메뉴·기능 제공 여부는 사용하는 계정에서 확인하세요. 어떤 창작 스킬을 어떤 순서로 조합할지는 이 저장소가 설계한 규칙이며, 공식 문서의 보증이나 추천 조합을 뜻하지 않습니다.

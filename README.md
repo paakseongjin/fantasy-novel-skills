@@ -15,38 +15,35 @@
 | 장편의 사건과 결말 구성 | `plan-fantasy-longform` | [장편 플롯](docs/plan-fantasy-longform.md) |
 | 다음 화의 목표·장면·끝맺음 구성 | `structure-serial-chapters` | [회차 구성](docs/structure-serial-chapters.md) |
 | 장면이나 회차의 실제 본문 집필 | `write-fantasy-prose` | [본문 집필](docs/write-fantasy-prose.md) |
-| 인물의 갈등·대사·동선 보완 | 문제에 맞는 전문 스킬 | [전체 스킬 선택표](docs/catalog.md) |
+| 한 장면의 인물 동기·관계 갈등 보완 | `write-character-conflict` | [인물 심리·관계 갈등](docs/write-character-conflict.md) |
+| 인물별 대사·말투·호칭 보완 | `craft-character-dialogue` | [대사·인물별 말투](docs/craft-character-dialogue.md) |
+| 공간·감각·동선 묘사 보완 | `write-immersive-scenes` | [공간·감각·동선 묘사](docs/write-immersive-scenes.md) |
 | 사건과 말투를 유지하며 문장 퇴고 | `refine-natural-korean` | [한국어 퇴고](docs/refine-natural-korean.md) |
 | 확정 설정과 원고의 모순 확인 | `audit-fantasy-canon` | [정전·연속성 검토](docs/audit-fantasy-canon.md) |
-| 초반 장벽·중후반 정체·이탈 위험 점검 | 문제에 맞는 연재 스킬 | [연재 작업 흐름](docs/workflow.md) |
+| 프롤로그·초반의 정보 부담 줄이기 | `lower-opening-barrier` | [초반 진입장벽](docs/lower-opening-barrier.md) |
+| 중후반 반복과 보상 지연 줄이기 | `prevent-serial-drag` | [중후반 연재 정체](docs/prevent-serial-drag.md) |
+| 여러 구간의 하차 위험과 수정 순서 점검 | `audit-dropout-risks` | [하차 위험 점검](docs/audit-dropout-risks.md) |
+
+[전체 26개 스킬과 다운로드](docs/catalog.md)에서 인물 성장, 복선, 전투, 독자 애착 등 다른 작업도 찾을 수 있습니다.
 
 ## 처음 사용한다면
 
 1. **작업 하나를 고릅니다.** 문장 퇴고부터 시험하려면 `refine-natural-korean`만 있으면 됩니다.
-2. **서비스에 맞는 개별 ZIP을 등록합니다.** [다운로드 목록](docs/catalog.md)에서 파일을 선택하고 [설치 안내](docs/installation.md)를 따릅니다.
+2. **사용 환경에 맞는 자료를 추가합니다.** Gemini와 Claude는 개별 ZIP을 사용합니다. ChatGPT에서는 Skills 업로드가 제공되는지 확인하거나 프로젝트 지침과 문서를 추가합니다. [설치 안내](docs/installation.md)
 3. **원고와 보존 조건을 함께 전달합니다.** 아래처럼 작은 요청으로 시작하세요.
 
 ```text
 refine-natural-korean을 적용해 다음 문장의 번역투와 호응만 다듬어 줘.
 사건, 시점, 가능성의 의미는 유지하고 수정 본문만 보여 줘.
 
-그는 문을 열 수 있었다. 그러나 끝내 손잡이에 손을 대지 않았다.
+그는 그 문을 개방하는 것이 가능했으나 끝내 손잡이에 손을 대지 않았다.
 ```
 
 가능성을 실제 행동으로 바꾸지 않았는지 확인합니다. 설치부터 첫 결과 확인까지의 설명은 [빠른 시작](docs/quickstart.md)에 있습니다.
 
-### 이미 Gemini에 기본 스킬을 등록했다면
+### 여러 작업을 연결하려면
 
-[라우터 ZIP](dist/gemini/route-fantasy-writing.zip)을 추가하면 됩니다. 같은 이름의 이전 라우터가 있으면 교체하세요. 라우터는 전문 스킬의 역할을 조정하며, 전문 스킬 자체를 설치하거나 포함하지 않습니다.
-
-```text
-route-fantasy-writing을 적용해 필요한 스킬을 골라 진행해 줘.
-아래 원고에 이어 다음 화의 방향을 세 가지 제안해 줘.
-아직 본문은 쓰지 말고, 확정 설정과 각 안의 장단점을 구분해 줘.
-[직전 원고 / 확정 설정 / 다음 화에서 유지할 조건]
-```
-
-[라우터 사용법](docs/route-fantasy-writing.md)에서 기획·집필·퇴고를 연결하는 방법을 확인하세요.
+필요한 전문 스킬과 함께 `route-fantasy-writing`을 등록하세요. 예를 들어 다음 화의 구성과 본문을 모두 요청하려면 `structure-serial-chapters`와 `write-fantasy-prose`를 준비합니다. 서비스별 조합 방식과 라우터 파일은 [라우터 사용법](docs/route-fantasy-writing.md)에 있습니다.
 
 ## 서비스별 이용 방법
 
@@ -54,8 +51,8 @@ route-fantasy-writing을 적용해 필요한 스킬을 골라 진행해 줘.
 |---|---|---|
 | Gemini Apps | [Gemini 개별 ZIP](dist/gemini) | Skills에서 파일 업로드 |
 | Claude | [Claude 개별 ZIP](dist/claude) | Skills에서 파일 업로드 |
-| ChatGPT의 Skills 제공 계정 | [ChatGPT 개별 ZIP](dist/chatgpt) | 계정의 업로드 화면에서 지원 형식 확인 |
-| ChatGPT 프로젝트 | [프로젝트 지침](platforms/chatgpt/project-instructions.md) + [참고 문서](dist/chatgpt-project) | 프로젝트 지침과 자료로 추가 |
+| ChatGPT Skills 업로드 가능 계정 | [ChatGPT용 배포 ZIP](dist/chatgpt) | Plugins → Skills에서 업로드 형식 확인 |
+| ChatGPT 프로젝트 | [프로젝트 지침](platforms/chatgpt/project-instructions.md) + [프로젝트용 문서](dist/chatgpt-project) | 프로젝트 설정에 지침을 붙여 넣고 문서를 소스로 추가 |
 
 메뉴와 이용 조건은 계정·워크스페이스에 따라 다릅니다. 등록 단계와 공식 근거는 [설치 안내](docs/installation.md)에서 확인하세요. 프로젝트 자료 방식은 네이티브 스킬 등록과 별개의 이용 방식입니다.
 
@@ -66,7 +63,7 @@ route-fantasy-writing을 적용해 필요한 스킬을 골라 진행해 줘.
 | 기본 창작 스킬 | 17개 | 세계관·구성·집필·수정·검토 |
 | 조합·라우팅 스킬 | 1개 | 자연어 요청에 따른 스킬 선택과 인계 |
 | 세계관 분야별 선택형 | 8개 | 통합형 대신 필요한 분야만 사용 |
-| 서비스별 개별 ZIP | 78개 | 위 26개 스킬을 3개 서비스용으로 제공 |
+| 서비스별 개별 ZIP | 78개 | 스킬 26개 × 서비스 3종. 업로드 조건은 서비스별 안내 참고 |
 | 프로젝트용 단일 문서 | 18개 | 기본 17개와 라우터의 지침·참고 자료 |
 
 세계관 자료에는 **명칭 48개와 설계·검토 예시 168개**, 총 216개의 번호 예시가 있습니다. 장편 스킬의 예시 28개와 연재 점검 예시 16개는 별도입니다. 장르 프리셋 7종, 연결 세계관 예제와 작업 양식도 제공합니다.

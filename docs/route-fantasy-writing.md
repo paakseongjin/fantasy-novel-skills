@@ -2,13 +2,13 @@
 
 [가이드 홈](index.md) · [다운로드](catalog.md) · [실전 작업](workflow.md)
 
-`route-fantasy-writing`은 기존 창작 스킬 17개에 추가하는 조합 전용 스킬입니다. “다음 화를 구성해서 써 줘”, “대사만 고쳐 줘” 같은 요청에서 필요한 스킬과 순서를 고르고 결과를 이어 줍니다. 특정 작품이나 외부 저장 공간에 의존하지 않습니다.
+`route-fantasy-writing`은 담당 스킬이 불명확하거나 “다음 화를 구성해서 써 줘”처럼 여러 결과물을 이어야 할 때 사용합니다. 대사만 고치는 작업이라면 [대사 스킬](craft-character-dialogue.md)을 바로 사용할 수 있습니다.
 
 ## 설치
 
 [Gemini ZIP](../dist/gemini/route-fantasy-writing.zip) · [Claude ZIP](../dist/claude/route-fantasy-writing.zip) · [ChatGPT ZIP](../dist/chatgpt/route-fantasy-writing.zip) · [프로젝트용 문서](../dist/chatgpt-project/route-fantasy-writing.md) · [편집 원본](../skills/route-fantasy-writing/SKILL.md)
 
-필요한 전문 스킬과 라우터의 개별 ZIP을 사용합니다. 이전 버전을 등록해 두었다면 같은 이름의 항목을 최신 파일로 교체하세요. 서비스별 단계는 [설치 안내](installation.md)를 따릅니다.
+라우터와 해당 요청에 필요한 전문 스킬을 준비합니다. ChatGPT 프로젝트에서는 라우터 문서와 필요한 전문 문서를 소스로 추가합니다. 설치와 버전 교체는 [서비스별 안내](installation.md)를 따릅니다.
 
 라우터 ZIP에는 라우팅 지침과 선택표·조합 예시가 들어 있습니다. 다른 25개 전문 스킬 본문을 포함하거나 자동 설치하지 않습니다. 분야별 선택형 8개가 없어도 등록된 `build-fantasy-world`의 관련 지침을 활용합니다. 요청에 필요한 전문 스킬이 실제로 읽히지 않으면 적용 여부를 구분해 알립니다.
 
@@ -38,7 +38,7 @@ route-fantasy-writing을 적용해 다음 요청에 필요한 스킬을 골라 �
 [직전 원고 / 확정 설정 / 10화 목표 / 분량]
 ```
 
-활성화된 뒤에는 자연어 요청만으로 자동 선택될 수 있습니다. 처음 확인할 때는 `/` 또는 지원되는 화면의 `@`에서 라우터를 선택하거나 이름을 명시하세요. 한 단계만 필요하면 기존 전문 스킬을 직접 사용해도 됩니다.
+Gemini Apps에서는 `/` 또는 새 단축키 `@`로 라우터를 고릅니다. ChatGPT Skills에서는 `@`로 선택합니다. Claude에서는 활성 스킬이 요청에 맞는지 모델이 판단하므로, 예시처럼 이름과 작업을 함께 적으세요. 프로젝트에서는 첫 줄에 업로드한 `route-fantasy-writing.md`와 필요한 전문 문서를 명시합니다. [서비스별 안내](installation.md)
 
 | 요청 | 의도한 작동 |
 |---|---|
@@ -47,19 +47,17 @@ route-fantasy-writing을 적용해 다음 요청에 필요한 스킬을 골라 �
 | “내용을 바꾸지 말고 번역투만 없애 줘” | 한국어 퇴고만 수행 |
 | “설정집과 원고가 충돌하는지 확인해 줘” | 정전 감사, 양쪽 근거 대조 |
 
-## 공식 근거와 설계의 구분
+## 서비스별 조합 범위
 
-확인일: 2026-11-15.
+- Gemini Apps는 스킬 지침에서 다른 스킬을 참조할 수 있습니다. [Gemini 공식 도움말](https://support.google.com/gemini/answer/17094296?hl=en)
+- Claude는 요청에 맞는 여러 스킬을 함께 선택할 수 있습니다. 개별 스킬 지침에 적힌 다른 스킬 이름은 Claude의 명시적 호출로 동작하지 않습니다. [Claude 공식 도움말](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
+- ChatGPT는 설치된 스킬을 요청에 맞춰 하나 이상 선택할 수 있습니다. 프로젝트 방식에서는 소스로 추가한 문서를 사용합니다. [ChatGPT Skills](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) · [ChatGPT 프로젝트](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)
 
-- [GitHub 공식 Agent Skills 문서](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills): `SKILL.md`, `name`·`description` 메타데이터, 보조 자료 구조와 요청에 따른 선택 방식을 참고했습니다. 저장소의 `skills/`는 배포 원본 경로이며 Copilot 자동 탐색 경로라고 주장하지 않습니다.
-- [Agent Skills 규격](https://agentskills.io/specification): 이름·설명 형식과 필요한 참고 자료만 읽는 구조를 따릅니다.
-- [Google 공식 Gemini Apps 도움말](https://support.google.com/gemini/answer/17094296?hl=en): 스킬 지침에서 다른 스킬을 참조하는 조합, 활성화된 스킬의 자동 적용, ZIP의 루트 `SKILL.md` 형식을 확인했습니다. Gemini CLI의 명령을 Gemini Apps 기능으로 혼용하지 않습니다.
-
-어떤 창작 스킬을 어떤 순서로 연결할지는 이 저장소가 설계한 작업 규칙입니다. 공식 문서가 특정 소설 작업의 라우팅 정확성을 보장하는 것은 아닙니다. 이 저장소의 배포 검증에는 실제 Gemini 계정에서의 라우터 실행 시험이 포함되어 있지 않습니다. GitHub에 푸시해도 이미 등록된 스킬은 자동 갱신되지 않습니다.
+라우터는 창작 작업의 선택 기준과 순서를 안내합니다. 배포 검사는 파일과 참조를 확인하며, 서비스 계정에서 전문 지침이 실제로 적용되는지는 아래 사례로 점검할 수 있습니다. [공식 자료와 형식 근거](sources.md)
 
 ## 실행 시 확인할 사례
 
-아래는 모델 행동을 확인하기 위한 수동 검증 시나리오이며, 실제 Gemini 통과 결과가 아닙니다. 사례별 새 대화에서 원고 등 입력을 제공하고 요청 범위·보존 조건·결과를 평가합니다. 스킬 이름을 말했는지만으로 통과시키지 않습니다.
+아래 사례로 사용하는 서비스에서 동작을 직접 확인할 수 있습니다. 새 대화에 필요한 원고와 설정을 제공하고, 요청 범위·보존 조건·결과를 확인합니다.
 
 | 입력 상황 | 기대 행동 | 실패 신호 |
 |---|---|---|

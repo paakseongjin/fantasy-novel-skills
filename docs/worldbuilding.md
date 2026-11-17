@@ -29,7 +29,7 @@
 ## 자료를 읽는 순서
 
 1. 정본과 새 제안을 구분합니다. 여러 분야가 얽히면 [공통 규칙](../skills/build-fantasy-world/references/common.md)의 관련 절을 참고합니다.
-2. 필요한 분야의 지침과 예시만 참고합니다. 예시를 작품의 확정 설정으로 자동 편입하지 않습니다.
+2. 간단한 요청은 스킬 지침으로 바로 처리합니다. 세부 설계가 필요할 때 해당 분야 지침을, 사례가 필요할 때 해당 예시만 봅니다. 예시는 새 설정 제안의 참고 자료로 사용합니다.
 3. [장르 프리셋](../skills/build-fantasy-world/references/genre-presets.md)은 서클·원소·오러·정령·사령술·신성력·귀족 체계를 구체화할 때 사용합니다.
 4. 분야의 연결은 [연결 세계관](../skills/build-fantasy-world/references/connected-world.md), 다음 대화 인계는 [설정집 양식](../skills/build-fantasy-world/references/world-bible-template.md)을 참고합니다.
 5. 최종적으로 확정 모순·설명 누락·의도된 미스터리를 구분합니다. 실제 작품의 장기 연속성 검토는 [정전 감사](audit-fantasy-canon.md)를 사용해도 됩니다.
