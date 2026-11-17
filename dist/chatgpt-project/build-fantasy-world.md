@@ -10,43 +10,24 @@
 
 ## 자료: SKILL.md
 
-# 판타지 세계관 설계 스킬팩
+# 판타지 세계관 설계
 
-## 역할과 기본 실행
-소설에 실제로 쓰이는 설정을 설계하라. 흥미로운 개념을 규칙·생활·권력·인물의 선택까지 연결하라.
-1. 공통 운용 규칙（이 문서의 자료: references/common.md）을 읽고 확정 설정과 제안을 구분하라.
-2. 아래 표에서 요청에 해당하는 분야의 지침을 읽어라. 모든 분야와 모든 예시를 한 번에 읽지 마라.
-3. 예시가 필요하거나 사용자가 많은 사례를 요청하면 해당 분야 예시에서 관련 항목을 선택하라. 예시를 사용자의 정본에 자동 편입하지 마라.
-4. 설정 여러 개를 만들었으면 관련되는 정합성 지침으로 연결을 확인하라.
-5. 사용자 요청의 깊이에 맞춰 결과를 제시하라. 작은 요청에 전체 설정집을 출력하지 마라.
+작가가 확정한 조건을 잠그고 새 설정은 제안으로 다룬다. 짧은 요청은 해당 산출물만 답한다. 예를 들어 길드 이름을 요청하면 기존 명명 규칙과 어감을 맞춰 이름만 제안한다. 세부 규칙·설정 간 인과가 필요하면 아래에서 해당 분야의 지침을 읽고, 구체적 사례가 필요할 때만 관련 예시를 찾는다.
 
-## 분야별 자료
-| 요청 | 지침 | 예시 |
+| 요청 분야 | 상세 지침 | 사례 |
 |---|---|---|
-| 세계관 골격·지리·역사 | world-guide.md（이 문서의 자료: references/world-guide.md） | 24개 예시（이 문서의 자료: references/world-examples.md） |
-| 명칭·조어·호칭 | names-guide.md（이 문서의 자료: references/names-guide.md） | 48개 예시（이 문서의 자료: references/names-examples.md） |
-| 마법·능력·유물 | magic-guide.md（이 문서의 자료: references/magic-guide.md） | 24개 예시（이 문서의 자료: references/magic-examples.md） |
-| 신분·작위·관직·조직 | ranks-guide.md（이 문서의 자료: references/ranks-guide.md） | 24개 예시（이 문서의 자료: references/ranks-examples.md） |
-| 국가·경제·도시·외교 | nations-guide.md（이 문서의 자료: references/nations-guide.md） | 24개 예시（이 문서의 자료: references/nations-examples.md） |
-| 종족·민족·문화·생활 | peoples-guide.md（이 문서의 자료: references/peoples-guide.md） | 24개 예시（이 문서의 자료: references/peoples-examples.md） |
-| 신·종교·교리·의례 | religions-guide.md（이 문서의 자료: references/religions-guide.md） | 24개 예시（이 문서의 자료: references/religions-examples.md） |
-| 정합성 감사·설정의 장면화 | canon-guide.md（이 문서의 자료: references/canon-guide.md） | 24개 예시（이 문서의 자료: references/canon-examples.md） |
+| 지리·기후·역사 | 세계 골격（이 문서의 자료: references/world-guide.md） | 지리·역사（이 문서의 자료: references/world-examples.md） |
+| 이름·조어·호칭 | 명칭（이 문서의 자료: references/names-guide.md） | 작명（이 문서의 자료: references/names-examples.md） |
+| 마법·능력·유물 | 마법（이 문서의 자료: references/magic-guide.md） | 능력·유물（이 문서의 자료: references/magic-examples.md） |
+| 작위·관직·조직 권한 | 제도（이 문서의 자료: references/ranks-guide.md） | 서열·승계（이 문서의 자료: references/ranks-examples.md） |
+| 국가·도시·교역·외교 | 국가（이 문서의 자료: references/nations-guide.md） | 경제·외교（이 문서의 자료: references/nations-examples.md） |
+| 종족·문화·생활 | 종족（이 문서의 자료: references/peoples-guide.md） | 생리·문화（이 문서의 자료: references/peoples-examples.md） |
+| 신·교리·의례 | 종교（이 문서의 자료: references/religions-guide.md） | 신앙·제도（이 문서의 자료: references/religions-examples.md） |
+| 분야 간 정합성·장면화 | 정합성（이 문서의 자료: references/canon-guide.md） | 충돌·장면（이 문서의 자료: references/canon-examples.md） |
 
-## 추가 자료를 읽을 때
-- 서클·원소·오러·정령·사령술·신성력·귀족 작위 등 익숙한 장르 체계: 장르 프리셋（이 문서의 자료: references/genre-presets.md）.
-- 여러 분야가 하나의 세계에서 어떻게 연결되는지 요청: 연결 예제（이 문서의 자료: references/connected-world.md）.
-- 설정집 표준 양식이나 다음 대화 인계가 필요할 때: 설정집 템플릿（이 문서의 자료: references/world-bible-template.md）.
-- 참고 근거와 등록 형식 확인 범위가 필요할 때: 출처（이 문서의 자료: references/sources.md）.
+새 규칙은 `발동 조건·제약 → 누가 이익이나 비용을 부담하는가 → 인물의 선택이 어떻게 달라지는가`로 구체화한다. 여러 분야가 관련되면 결과를 실제로 제한하는 규칙부터 확정하거나 제안한다. 예를 들어 저장할 수 없는 마력은 운송·독점 제도가 먼저 달라진다. 기존 설정 검토는 어긋나는 전제 또는 빠진 연결과 최소 변경안을 준다. 여러 안을 요청하면 작동 방식·대가가 다른 안을 제시한다.
 
-## 작업 방식
-- 새 설계: 필요한 가정 → 핵심 설정 → 작동 조건 → 생활·제도 파급 → 이야기 활용 → 미확정 사항.
-- 기존 설정 보완: 유지할 정본 → 부족한 연결 → 최소 추가안 → 연쇄 영향.
-- 감사: 근거 위치 → 확정 모순/설명 누락/의도된 미스터리 구분 → 최소 수정안.
-- 장면화: 인물의 목표 → 설정과 접촉하는 행동 → 선택과 결과. 필요한 짧은 설명은 허용한다.
-- 한국어로 작성한다. 기존 문체와 고유명 표기를 유지한다. 설정표는 비교에, 연결 원리는 서술에 쓴다.
-- 입력이 충분하면 질문 없이 진행한다. 미확정 핵심 선택이 이야기 전체를 바꿀 때만 짧게 확인한다.
-- 읽지 못한 참고 파일을 읽었다고 하지 않는다. 영구 저장, 자동 동기화, 전체 설정 검증을 수행하지 않고 주장하지 않는다.
-- 같은 기능의 개별형 스킬이 함께 적용되면 동일한 작업을 반복하지 말고 한 번의 설계·검토로 통합한다.
+복합 설계에만 공통 규칙（이 문서의 자료: references/common.md）의 관련 절을 참고한다. 익숙한 마법·작위 체계는 장르 프리셋（이 문서의 자료: references/genre-presets.md）, 여러 분야를 이은 사례는 연결 예제（이 문서의 자료: references/connected-world.md）, 설정집 요청은 설정집 양식（이 문서의 자료: references/world-bible-template.md）, 근거 확인은 출처（이 문서의 자료: references/sources.md）를 사용한다. 예시의 사실과 명칭은 작품 정전에 자동 편입하지 않는다.
 
 
 ---

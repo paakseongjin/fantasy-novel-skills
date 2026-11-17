@@ -8,6 +8,7 @@ import posixpath
 import re
 import sys
 import zipfile
+import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -183,23 +184,74 @@ def expected_outputs():
     return outputs
 
 
+def same_archive(actual, expected):
+    """Compare ZIP structure and content independently of the zlib version."""
+    if actual == expected:
+        return True
+    try:
+        with zipfile.ZipFile(io.BytesIO(actual)) as left, zipfile.ZipFile(io.BytesIO(expected)) as right:
+            if left.namelist() != right.namelist():
+                return False
+            for got, want in zip(left.infolist(), right.infolist()):
+                fields = ("date_time", "create_system", "external_attr", "compress_type")
+                if any(getattr(got, field) != getattr(want, field) for field in fields):
+                    return False
+                got_data, want_data = left.read(got), right.read(want)
+                if got.filename.endswith(".zip"):
+                    if not same_archive(got_data, want_data):
+                        return False
+                elif got_data != want_data:
+                    return False
+    except (zipfile.BadZipFile, zlib.error, EOFError, RuntimeError):
+        return False
+    return True
+
+
+def verify_outputs(outputs):
+    stale = []
+    manifest_path = "dist/manifest.json"
+    manifest = json.loads(outputs[manifest_path])
+    by_path = {record["path"]: record for record in manifest["packages"]}
+    for path, expected in outputs.items():
+        if path == manifest_path:
+            continue
+        dest = ROOT / path
+        if not dest.is_file():
+            stale.append(path)
+            continue
+        actual = dest.read_bytes()
+        if path.endswith(".zip"):
+            if not same_archive(actual, expected):
+                stale.append(path)
+            if path in by_path:
+                by_path[path].update(bytes=len(actual), sha256=hashlib.sha256(actual).hexdigest())
+        elif actual != expected:
+            stale.append(path)
+
+    manifest_file = ROOT / manifest_path
+    try:
+        actual_manifest = json.loads(manifest_file.read_bytes())
+    except (FileNotFoundError, UnicodeError, json.JSONDecodeError):
+        actual_manifest = None
+    if actual_manifest != manifest:
+        stale.append(manifest_path)
+
+    expected_dist = {path for path in outputs if path.startswith("dist/")}
+    actual_dist = {p.relative_to(ROOT).as_posix() for p in (ROOT / "dist").rglob("*") if p.is_file()}
+    return stale + sorted(actual_dist - expected_dist)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Verify generated files without writing")
     args = parser.parse_args()
     outputs = expected_outputs()
-    errors = []
-    for path, data in outputs.items():
-        dest = ROOT / path
-        if args.check:
-            if not dest.is_file() or dest.read_bytes() != data:
-                errors.append(path)
-        else:
+    if not args.check:
+        for path, data in outputs.items():
+            dest = ROOT / path
             dest.parent.mkdir(parents=True, exist_ok=True)
             dest.write_bytes(data)
-    expected = {p for p in outputs if p.startswith("dist/")}
-    actual = {p.relative_to(ROOT).as_posix() for p in (ROOT / "dist").rglob("*") if p.is_file()}
-    errors.extend(sorted(actual - expected))
+    errors = verify_outputs(outputs)
     if errors:
         print("Stale, missing, or unexpected generated files:\n" + "\n".join(errors), file=sys.stderr)
         return 1

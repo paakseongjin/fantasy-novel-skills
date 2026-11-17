@@ -4,7 +4,7 @@ import re
 import sys
 from urllib.parse import unquote
 
-from build_packages import ROOT, LINK, collect, expected_outputs
+from build_packages import ROOT, LINK, collect, expected_outputs, verify_outputs
 
 
 def main():
@@ -14,12 +14,16 @@ def main():
         errors.append("Expected 17 creative skills, 1 router, and 8 optional skills")
     router = "route-fantasy-writing"
     catalog = (ROOT / f"skills/{router}/references/skill-catalog.md").read_text(encoding="utf-8")
-    targets = re.findall(r"^\| `([a-z0-9-]+)` \|", catalog, re.M)
+    targets = re.findall(r"\| `([a-z0-9-]+)` (?=\|)", catalog)
     if len(targets) != len(set(targets)) or set(targets) != set(skills) - {router}:
         errors.append("Router catalog has missing, unknown, or duplicate skill targets")
-    for guide in re.findall(r"`(references/[a-z-]+\.md)`", catalog):
-        if guide not in skills["build-fantasy-world"]:
-            errors.append(f"Router worldbuilding fallback does not exist: {guide}")
+    fallbacks = re.findall(r"\| `([a-z0-9-]+)` \| `(references/[a-z-]+\.md)` \|", catalog)
+    if {name for name, _ in fallbacks} != set(skills) - core:
+        errors.append("Router worldbuilding fallback rows differ from optional skill names")
+    for name, guide in fallbacks:
+        if (guide not in skills["build-fantasy-world"]
+                or (name in skills and guide not in skills[name])):
+            errors.append(f"Router worldbuilding fallback does not match {name}: {guide}")
     counts = {"world": ("W", 24), "names": ("N", 48), "magic": ("M", 24),
               "ranks": ("H", 24), "nations": ("C", 24), "peoples": ("P", 24),
               "religions": ("R", 24), "canon": ("A", 24)}
@@ -39,14 +43,8 @@ def main():
             if not (file.parent / path).exists():
                 errors.append(f"Broken link: {file.relative_to(ROOT)} -> {target}")
     outputs = expected_outputs()
-    for path, data in outputs.items():
-        dest = ROOT / path
-        if not dest.is_file() or dest.read_bytes() != data:
-            errors.append(f"Generated file differs or missing: {path}")
-    actual = {p.relative_to(ROOT).as_posix() for p in (ROOT / "dist").rglob("*") if p.is_file()}
-    expected_dist = {p for p in outputs if p.startswith("dist/")}
-    if actual != expected_dist:
-        errors.append(f"Unexpected dist files: {sorted(actual - expected_dist)}")
+    errors.extend(f"Generated file differs, is missing, or is unexpected: {path}"
+                  for path in verify_outputs(outputs))
     if errors:
         print("\n".join(errors), file=sys.stderr)
         return 1

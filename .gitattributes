@@ -1,0 +1,3 @@
+# Generated text uses LF so checkout preserves the published bytes.
+/dist/chatgpt-project/*.md text eol=lf
+/dist/manifest.json text eol=lf
