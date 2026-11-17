@@ -43,6 +43,8 @@ plan-fantasy-longform을 적용해 장편의 사건 구조를 설계해 줘.
 
 ## 다음 작업
 
+중요 사건을 먼저 정하는 방식과, 장면을 쓰면서 인물의 다음 선택을 발견하는 방식을 작품에 맞춰 쓸 수 있습니다. [장편 예시의 계획과 탐색](../skills/plan-fantasy-longform/references/examples-and-template.md#계획과-탐색을-오가는-법)을 참고하세요.
+
 [인물 성장](design-character-arcs.md)으로 사건에 따른 변화의 계기를 잡고, [회차 구성](structure-serial-chapters.md)으로 실제 연재 단위에 나눌 수 있습니다.
 
 ## 참고 양식

@@ -46,6 +46,6 @@ lower-opening-barrier로 프롤로그와 1~2화를 검토해 줘.
 
 ## 참고 양식
 
-[예시 4개와 작업 양식](../skills/lower-opening-barrier/references/examples-and-template.md)
+[예시와 작업 양식](../skills/lower-opening-barrier/references/examples-and-template.md) · [첫 장면 비교와 새 부의 도입](../skills/lower-opening-barrier/references/examples-and-template.md#도입을-다시-열-때)
 
 예시의 인물·규칙은 설명용 창작입니다. 실제 작품에는 채택한 내용만 적용하세요.

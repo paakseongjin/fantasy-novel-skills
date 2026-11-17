@@ -10,8 +10,8 @@
 
 | 항목 | 전달할 내용 |
 |---|---|
-| 작품 조건 | 장르·시점·문체·목표 분량 |
-| 관련 자료 | 확정 설정, 직전 원고와 인물 상태 |
+| 작품 조건 | 장르·시점·목표 분량, 필요한 경우 작품별 문체 카드나 작가가 고른 대표 문단 |
+| 관련 자료 | 확정 설정, 직전 공개본 또는 집필 기준 버전, 인물 상태와 영향 있는 정정 |
 | 장면 목표 | 원하는 것·장애·선택·고정 결말 |
 | 창작 범위 | 새 설정 허용 여부와 공개하지 않을 정보 |
 
@@ -37,6 +37,8 @@ write-fantasy-prose로 아래 장면의 초고를 써 줘.
 - 시점 인물이 알 수 있는 정보로 서술했는가?
 - 선택과 결과가 장면 목표·고정 결말에 이어지는가?
 - 앞 장면의 부상·위치·소지품·관계가 유지되는가?
+- 시점 인물이 직업이나 관계 때문에 알아챈 것이 새로운 판단이나 행동으로 이어지는가?
+- 이전 공개본에서 빠진 단서가 이미 일어난 사건처럼 들어오지 않았는가?
 
 ## 작업 경계
 
@@ -48,6 +50,6 @@ write-fantasy-prose로 아래 장면의 초고를 써 줘.
 
 ## 참고 양식
 
-[장면 카드](../skills/write-fantasy-prose/references/SCENE_CARD_TEMPLATE.md) · [원고 점검](../skills/write-fantasy-prose/references/PROSE_CHECK_TEMPLATE.md) · [회차 인계](../skills/write-fantasy-prose/references/CHAPTER_HANDOFF_TEMPLATE.md)
+[작품별 문체 카드](../skills/write-fantasy-prose/references/VOICE_CARD.md) · [장면을 살리는 사례](../skills/write-fantasy-prose/references/scene-craft.md) · [장면 카드](../skills/write-fantasy-prose/references/SCENE_CARD_TEMPLATE.md) · [원고 점검](../skills/write-fantasy-prose/references/PROSE_CHECK_TEMPLATE.md) · [회차 인계](../skills/write-fantasy-prose/references/CHAPTER_HANDOFF_TEMPLATE.md)
 
 예시의 인물·규칙은 설명용 창작입니다. 실제 작품에는 채택한 내용만 적용하세요.

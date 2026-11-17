@@ -50,7 +50,7 @@ refine-natural-korean을 적용해 다음 문장의 번역투와 호응만 다�
 | 사용하는 환경 | 받을 자료 | 등록 방식 |
 |---|---|---|
 | Gemini Apps | [Gemini 개별 ZIP](dist/gemini) | Skills에서 파일 업로드 |
-| Claude | [Claude 개별 ZIP](dist/claude) | Skills에서 파일 업로드 |
+| Claude | [Claude 개별 ZIP](dist/claude) | Plugins 또는 Customize에서 스킬 업로드 |
 | ChatGPT Skills 업로드 가능 계정 | [ChatGPT용 배포 ZIP](dist/chatgpt) | Plugins → Skills에서 업로드 형식 확인 |
 | ChatGPT 프로젝트 | [프로젝트 지침](platforms/chatgpt/project-instructions.md) + [프로젝트용 문서](dist/chatgpt-project) | 프로젝트 설정에 지침을 붙여 넣고 문서를 소스로 추가 |
 
@@ -72,10 +72,12 @@ refine-natural-korean을 적용해 다음 문장의 번역투와 호응만 다�
 
 ## 연재 작업에 적용하기
 
-문장 퇴고나 동선 수정은 담당 스킬 하나로 시작합니다. 여러 결과물이 필요하면 라우터를 쓰고, 다음 단계에서 사용할 **근거 위치와 바뀐 상태**만 이어 줍니다. 이어쓰기에는 직전 회차의 끝부분과 이번 장면에 걸리는 확정 설정부터 전달하세요.
+문장 퇴고나 동선 수정은 담당 스킬 하나로 시작합니다. 연재 중이라면 직전 공개본의 끝부분, 이번 장면과 관련된 확정 설정, 필요한 경우 작품별 문체 카드를 전달하세요. 출고 직전에 뺀 단서와 공개 후 정정 이력은 회차 인계에 기록합니다.
 
-- [실전 작업 가이드](docs/workflow.md): 세계관 설계, 다음 화 집필, 수정, 연재 점검 요청 예시
-- [작품 자료 관리](docs/project-data.md): 확정 설정, 인물 지식, 복선, 버전과 인계 기록
+- [리아다 3회차 실습](docs/serial-writing-example.md): 초고에서 단서를 빼고 공개본을 기준으로 다음 화 쓰기
+- [실전 작업 가이드](docs/workflow.md): 다음 화 집필, 공개 전 검수, 독자 반응과 수정 순서
+- [작품 자료 관리](docs/project-data.md): 공개본·정정본, 인물 지식, 복선, 문체 카드와 인계
+- [작가의 공개 작법과 적용 예](docs/sources.md#창작-원리의-참고-자료): 한국·일본·중국·영어권 소설가와 웹소설가의 경험을 한국어 판타지 장면에 적용
 - [동작 확인 사례](docs/behavior-checks.md): 단일 스킬 선택, 이어쓰기, 설정 예외, 복선 상태
 - [문제 해결](docs/troubleshooting.md): 등록 실패, 스킬 미적용, 자료 누락과 과도한 수정
 
