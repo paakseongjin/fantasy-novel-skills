@@ -2,7 +2,7 @@
 
 [가이드 홈](index.md) · [빠른 시작](quickstart.md) · [다운로드](catalog.md)
 
-**2026-11-17**에 웹 화면의 등록 절차를 공식 문서와 대조했습니다. 계정·워크스페이스·앱 버전에 따라 표시되는 메뉴가 다를 수 있습니다.
+**2026-11-18**에 서비스별 설치 안내를 공식 문서와 대조했습니다. 계정·워크스페이스·앱 버전에 따라 표시되는 메뉴가 다를 수 있습니다. 실제 계정에서는 등록 후 [첫 요청](quickstart.md#3-첫-요청을-보내세요)으로 확인하세요.
 
 ## 1. 파일 내려받기
 
@@ -21,10 +21,10 @@
 
 Google 공식 안내는 스킬의 자동 적용과 여러 스킬의 조합을 지원하며, 스킬 지침에서 다른 스킬을 참조할 수 있다고 설명합니다. [공식 도움말](https://support.google.com/gemini/answer/17094296?hl=en)
 
-1. 웹 사이드바에서 **Customize → Skills**를 엽니다. Customize가 보이지 않으면 More를 확인합니다.
+1. [Gemini 웹 앱](https://gemini.google.com/)에서 사이드바 **Customize → Skills**를 엽니다. Customize가 보이지 않으면 More를 확인합니다. 파일을 올려 등록하는 경로는 웹 앱에서 이용합니다.
 2. **Create → Upload**를 선택하고 Gemini용 개별 ZIP을 엽니다.
 3. **Upload**를 누르고 이름·설명·지침과 참고 자료를 확인한 뒤 **Create**로 등록합니다.
-4. 활성화 상태를 확인합니다. 새 대화의 입력창에서 `/` 또는 화면에 적용된 새 단축키 `@`로 스킬을 선택하고 작업을 요청합니다.
+4. 활성화 상태를 확인합니다. 새 대화의 입력창에 `/`를 입력해 스킬을 고릅니다. 화면에 새 단축키가 적용됐다면 `@`를 사용합니다.
 
 성인 계정이 필요합니다. Keep Activity를 끈 상태에서도 스킬 자체는 사용할 수 있으며, 연결 앱 기능의 이용 조건은 별개입니다. 이 팩의 기본 집필 작업은 대화에 제공한 자료로 수행할 수 있습니다.
 
@@ -32,12 +32,12 @@ Google 공식 안내는 스킬의 자동 적용과 여러 스킬의 조합을 �
 
 ## 3. Claude
 
-Claude는 사용자 지정 스킬 폴더를 ZIP으로 업로드하는 방식을 안내합니다. 코드 실행·파일 생성 기능과 조직의 스킬 이용 설정을 먼저 확인합니다. [사용 안내](https://support.claude.com/en/articles/12512180-use-skills-in-claude) · [패키지 구조](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
+Claude는 사용자 지정 스킬 폴더를 ZIP으로 업로드하는 방식을 안내합니다. 새 화면에서는 사이드바의 **Customize**가 **Plugins**로 바뀌고, 통합 화면에서 스킬을 찾을 수 있습니다. Anthropic은 Enterprise의 전환을 2026년 11월 30일로 안내합니다. [사용 안내](https://support.claude.com/en/articles/12512180-use-skills-in-claude) · [패키지 구조](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills) · [통합 화면 안내](https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page)
 
 1. 개인 계정은 **Settings → Capabilities**에서 코드 실행·파일 생성을 켭니다. 갱신된 설정에서는 **Create and edit files**로 표시됩니다. Team·Enterprise의 조직 설정은 관리자가 **Organization settings → Plugins & skills → Policy**에서 확인합니다.
-2. **Customize → Skills**에서 추가 버튼 → **Create skill → Upload a skill**을 선택합니다.
+2. **Customize → Skills**를 엽니다. 새 화면에서는 **Plugins**를 열고 스킬을 찾습니다. 사용자 지정 스킬을 추가하는 메뉴에서 **Create skill → Upload a skill**을 선택합니다.
 3. Claude용 개별 ZIP을 업로드합니다. ZIP 안의 스킬명 폴더에 `SKILL.md`가 있어야 합니다.
-4. 목록에서 활성화한 뒤 스킬 이름과 작업을 프롬프트에 적습니다. Claude는 요청에 맞는 활성 스킬을 선택합니다. 적용 여부는 응답과 화면에서 확인합니다.
+4. 목록에서 활성화한 뒤 스킬 이름과 작업을 프롬프트에 적습니다. 새 화면에서는 대화 입력창의 **+** 또는 `/`로 스킬을 고를 수도 있습니다. 적용 여부는 응답과 화면에서 확인합니다.
 
 Team·Enterprise에서는 조직 정책에 따라 생성·업로드 또는 코드 실행이 제한될 수 있습니다. 메뉴가 없거나 비활성 상태면 계정 설정과 조직 권한을 확인하세요. 스킬이 활성화되어도 실제 요청 결과는 검토해야 합니다.
 
@@ -49,7 +49,7 @@ Team·Enterprise에서는 조직 정책에 따라 생성·업로드 또는 코�
 
 1. 사이드바 **Plugins → Skills**로 이동합니다.
 2. **Create → Upload from your computer**를 엽니다.
-3. 화면이 ZIP을 허용하면 ChatGPT용 개별 ZIP을 선택합니다. 화면에서 지원하는 형식이 다르면 **Create with editor** 또는 아래의 프로젝트 방식을 이용하세요. 이 저장소는 배포 ZIP의 내부 구조를 검사합니다. 공식 도움말은 계정별 ZIP 수용 여부를 명시하지 않습니다.
+3. 업로드 화면에서 형식을 확인하고 ZIP을 받을 경우 ChatGPT용 개별 ZIP을 선택합니다. 다른 형식이 표시되면 화면의 안내를 따릅니다. 원본과 참고 자료를 함께 쓰는 대안으로 아래의 프로젝트 방식도 있습니다. 공식 도움말은 컴퓨터 업로드 절차를 안내하며, 이 팩의 ZIP 수용 여부는 실제 화면에서 확인해야 합니다.
 4. 업로드 검사와 등록 상태를 확인한 뒤 입력창에서 `@`로 스킬을 선택하고 작업을 요청합니다. [스킬 사용·형식 안내](https://learn.chatgpt.com/docs/build-skills)
 
 검사에서 검토 필요나 차단으로 표시되면 화면의 사유를 확인하세요.
@@ -60,7 +60,7 @@ Team·Enterprise에서는 조직 정책에 따라 생성·업로드 또는 코�
 
 1. 새 프로젝트를 열고 **더보기(···) → 프로젝트 설정(Project settings)**에서 [프로젝트 지침](../platforms/chatgpt/project-instructions.md)을 붙여 넣습니다.
 2. 소스 영역의 **소스 추가(Add sources)**에서 [프로젝트용 문서](../dist/chatgpt-project) 중 필요한 `.md` 파일을 추가합니다.
-3. 작품의 설정집과 원고를 별도 자료로 추가합니다.
+3. 작품의 설정집, 공개본 발췌, 회차 인계, 문체 카드를 필요한 만큼 별도 자료로 추가합니다.
 4. “업로드한 write-fantasy-prose.md 자료를 적용해…”처럼 요청합니다.
 
 단일 문서 안에는 원본 지침과 참고 자료가 함께 있습니다. 상대 경로의 파일을 읽으라는 지시는 해당 문서의 같은 이름을 가진 자료 절을 참고한다는 뜻입니다. 선택형 세계관 8개의 프로젝트 문서는 별도로 생성하지 않으므로 통합형 문서의 관련 분야를 이용하세요.

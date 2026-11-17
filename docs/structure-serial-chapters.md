@@ -10,9 +10,9 @@
 
 | 항목 | 전달할 내용 |
 |---|---|
-| 전후 상황 | 직전 회차의 종료 상태와 이후 확정 사건 |
+| 전후 상황 | 직전 공개본 또는 확정본의 종료 상태와 이후 확정 사건 |
 | 이번 회차 목표 | 인물이 얻거나 잃을 것, 선택과 결과 |
-| 연재 조건 | 작가가 정한 분량·독자층·플랫폼 |
+| 연재 조건 | 작가가 정한 분량·독자층·플랫폼, 분할·병합 시 수정 가능한 범위 |
 | 구성 제한 | 고정 시점·결말, 반드시 포함하거나 미룰 정보 |
 
 ## 요청 예시
@@ -47,6 +47,6 @@ structure-serial-chapters로 다음 회차를 구성해 줘.
 
 ## 참고 양식
 
-[예시 4개와 작업 양식](../skills/structure-serial-chapters/references/examples-and-template.md)
+[예시와 작업 양식](../skills/structure-serial-chapters/references/examples-and-template.md) · [리아다 연재 실습](serial-writing-example.md)
 
 예시의 인물·규칙은 설명용 창작입니다. 실제 작품에는 채택한 내용만 적용하세요.
