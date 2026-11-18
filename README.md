@@ -76,6 +76,7 @@ refine-natural-korean을 적용해 다음 문장의 번역투와 호응만 다�
 
 - [리아다 3회차 실습](docs/serial-writing-example.md): 초고에서 단서를 빼고 공개본을 기준으로 다음 화 쓰기
 - [실전 작업 가이드](docs/workflow.md): 다음 화 집필, 공개 전 검수, 독자 반응과 수정 순서
+- [AI와 함께 쓰고 연재하는 법](docs/ai-serial-workflow.md): 상황별 스킬 조합, 단계 간 인계, 비축 원고 실습과 작업 시간 기록
 - [작품 자료 관리](docs/project-data.md): 공개본·정정본, 인물 지식, 복선, 문체 카드와 인계
 - [작가의 공개 작법과 적용 예](docs/sources.md#창작-원리의-참고-자료): 한국·일본·중국·영어권 소설가와 웹소설가의 경험을 한국어 판타지 장면에 적용
 - [동작 확인 사례](docs/behavior-checks.md): 단일 스킬 선택, 이어쓰기, 설정 예외, 복선 상태
