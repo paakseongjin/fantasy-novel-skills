@@ -43,6 +43,12 @@ def main():
             if not (file.parent / path).exists():
                 errors.append(f"Broken link: {file.relative_to(ROOT)} -> {target}")
     outputs = expected_outputs()
+    project_router = outputs[f"dist/chatgpt-project/{router}.md"].decode()
+    world_sections = outputs["dist/chatgpt-project/build-fantasy-world.md"].decode().splitlines()
+    for name, guide in fallbacks:
+        project_row = f"| `{name}` | `build-fantasy-world.md`의 `자료: {guide}` |"
+        if project_row not in project_router or f"## 자료: {guide}" not in world_sections:
+            errors.append(f"Project router must identify the worldbuilding document and section for {name}")
     errors.extend(f"Generated file differs, is missing, or is unexpected: {path}"
                   for path in verify_outputs(outputs))
     if errors:

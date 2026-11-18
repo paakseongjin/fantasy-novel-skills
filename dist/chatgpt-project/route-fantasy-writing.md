@@ -67,11 +67,11 @@
 
 | 분야 | 선택형 | 통합형 상세 지침 |
 |---|---|---|
-| 지리·기후·역사 | `design-fantasy-world` | `references/world-guide.md` |
-| 명칭·조어 | `name-fantasy-world` | `references/names-guide.md` |
-| 마법·능력·유물 | `design-fantasy-magic` | `references/magic-guide.md` |
-| 작위·관직·권한 | `design-fantasy-institutions` | `references/ranks-guide.md` |
-| 국가·도시·교역 | `design-fantasy-nations` | `references/nations-guide.md` |
-| 종족·문화·생활 | `design-fantasy-peoples` | `references/peoples-guide.md` |
-| 신·교리·의례 | `design-fantasy-religions` | `references/religions-guide.md` |
-| 설정 분야 간 인과·장면화 | `audit-fantasy-worldbuilding` | `references/canon-guide.md` |
+| 지리·기후·역사 | `design-fantasy-world` | `build-fantasy-world.md`의 `자료: references/world-guide.md` |
+| 명칭·조어 | `name-fantasy-world` | `build-fantasy-world.md`의 `자료: references/names-guide.md` |
+| 마법·능력·유물 | `design-fantasy-magic` | `build-fantasy-world.md`의 `자료: references/magic-guide.md` |
+| 작위·관직·권한 | `design-fantasy-institutions` | `build-fantasy-world.md`의 `자료: references/ranks-guide.md` |
+| 국가·도시·교역 | `design-fantasy-nations` | `build-fantasy-world.md`의 `자료: references/nations-guide.md` |
+| 종족·문화·생활 | `design-fantasy-peoples` | `build-fantasy-world.md`의 `자료: references/peoples-guide.md` |
+| 신·교리·의례 | `design-fantasy-religions` | `build-fantasy-world.md`의 `자료: references/religions-guide.md` |
+| 설정 분야 간 인과·장면화 | `audit-fantasy-worldbuilding` | `build-fantasy-world.md`의 `자료: references/canon-guide.md` |

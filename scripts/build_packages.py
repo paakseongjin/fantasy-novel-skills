@@ -111,6 +111,11 @@ def project_document(name, payload):
         text = payload[path].decode()
         if path == "SKILL.md":
             text = text.split("---\n", 2)[2].lstrip()
+        if name == "route-fantasy-writing" and path == "references/skill-catalog.md":
+            # These table cells point into the worldbuilding document, outside the router.
+            text = re.sub(
+                r"\| `(references/[^\s`]+\.md)` \|$",
+                r"| `build-fantasy-world.md`의 `자료: \1` |", text, flags=re.MULTILINE)
         def replace(match):
             label, target = match.groups()
             resolved = local_target(path, target)
@@ -130,12 +135,13 @@ def skill_bundle(outputs, names, title, date_time=(2026, 11, 15, 0, 0, 0)):
         ROOT / "platforms/chatgpt/project-instructions.md").read_text(encoding="utf-8").encode()
     count = len(names)
     entries["사용안내.txt"] = (
-        f"{title}\n\n이 묶음을 먼저 압축 해제하세요. chatgpt, claude, "
-        f"gemini 폴더에는 해당 서비스별 개별 ZIP {count}개가 들어 있습니다. 바깥 묶음 전체가 "
-        "아니라 필요한 개별 ZIP을 각각 업로드하세요.\n\nChatGPT에서 스킬 업로드를 제공하지 "
-        "않는 계정은 프로젝트 지침을 복사하고 chatgpt-project의 필요한 Markdown 문서를 "
-        "프로젝트 자료에 추가하세요. 이 방식은 스킬 설치와 다릅니다.\n\n플랫폼의 제공 여부·"
-        "계정·메뉴는 다를 수 있으며 실제 계정 설치는 검증하지 않았습니다. 공식 상세 안내: "
+        f"{title}\n\n먼저 이 묶음의 압축을 푸세요. 각 서비스 폴더에 개별 ZIP {count}개가 있습니다.\n\n"
+        "Gemini Apps에서는 gemini 폴더에서, Claude에서는 claude 폴더에서 "
+        "필요한 스킬의 개별 ZIP을 골라 업로드하세요.\n\n"
+        "ChatGPT Skills에서는 업로드 화면이 ZIP을 지원할 때 chatgpt 폴더의 개별 ZIP을 선택하세요. "
+        "다른 형식을 요구하거나 Skills 메뉴가 보이지 않으면 아래 프로젝트 방식을 이용하세요.\n\n"
+        "ChatGPT 프로젝트에서는 chatgpt-project/project-instructions.md의 내용을 프로젝트 지침에 붙여 넣고, "
+        "같은 폴더에서 사용할 스킬의 .md 파일을 프로젝트 소스로 추가하세요.\n\n설치 가이드\n"
         "https://github.com/paakseongjin/fantasy-novel-skills/blob/main/docs/installation.md\n"
     ).encode()
     buffer = io.BytesIO()
