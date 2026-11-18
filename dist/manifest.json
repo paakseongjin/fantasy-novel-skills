@@ -412,38 +412,38 @@
     },
     {
       "path": "dist/chatgpt/route-fantasy-writing.zip",
-      "sha256": "748272ef05b420413f6d40d08a012870858e20683e19547d9cf1f53c90022760",
-      "bytes": 4167,
+      "sha256": "1b5cf52560812069a752bd1eb75a2388e05283a53a1d0b85fc4135c9a484cab6",
+      "bytes": 4153,
       "files": 3
     },
     {
       "path": "dist/claude/route-fantasy-writing.zip",
-      "sha256": "748272ef05b420413f6d40d08a012870858e20683e19547d9cf1f53c90022760",
-      "bytes": 4167,
+      "sha256": "1b5cf52560812069a752bd1eb75a2388e05283a53a1d0b85fc4135c9a484cab6",
+      "bytes": 4153,
       "files": 3
     },
     {
       "path": "dist/gemini/route-fantasy-writing.zip",
-      "sha256": "770804f7b1ed52a6d2a4defdc8853fc7e0ce3cc581bd94eaf1584f29928bc1da",
-      "bytes": 4035,
+      "sha256": "d26682354772367af8cf689677205bd3c96841167fd8ced8888ea342687332af",
+      "bytes": 4021,
       "files": 3
     },
     {
       "path": "dist/chatgpt/structure-serial-chapters.zip",
-      "sha256": "f2cb3ff3e7594971b26675a49abcbb535b830da4bb0a2ec24f21a7421f1c07c3",
-      "bytes": 2649,
+      "sha256": "bc82b9780761032718ed6fb09c4fe4d3d44394851af0a22cabc130c921e33da2",
+      "bytes": 2692,
       "files": 2
     },
     {
       "path": "dist/claude/structure-serial-chapters.zip",
-      "sha256": "f2cb3ff3e7594971b26675a49abcbb535b830da4bb0a2ec24f21a7421f1c07c3",
-      "bytes": 2649,
+      "sha256": "bc82b9780761032718ed6fb09c4fe4d3d44394851af0a22cabc130c921e33da2",
+      "bytes": 2692,
       "files": 2
     },
     {
       "path": "dist/gemini/structure-serial-chapters.zip",
-      "sha256": "99f5502d1728fc109115a48f10fdb4da61b71bf0103ed448f2dcb495345b4f8e",
-      "bytes": 2545,
+      "sha256": "cba646920f0f2dead5113d1fb4dd5f05eab9d1a191737bfdbe3c8b2805431602",
+      "bytes": 2588,
       "files": 2
     },
     {
@@ -466,20 +466,20 @@
     },
     {
       "path": "dist/chatgpt/write-fantasy-prose.zip",
-      "sha256": "08881dbe3c44dd9428a9e4fcbc0c73d3effc3ab4a06cca8ac200681b3ca1ecf6",
-      "bytes": 7197,
+      "sha256": "ccb0a9574c98ca4d73a4100ee0521eb1f23dfae4545ca617feea72955478642f",
+      "bytes": 7417,
       "files": 6
     },
     {
       "path": "dist/claude/write-fantasy-prose.zip",
-      "sha256": "08881dbe3c44dd9428a9e4fcbc0c73d3effc3ab4a06cca8ac200681b3ca1ecf6",
-      "bytes": 7197,
+      "sha256": "ccb0a9574c98ca4d73a4100ee0521eb1f23dfae4545ca617feea72955478642f",
+      "bytes": 7417,
       "files": 6
     },
     {
       "path": "dist/gemini/write-fantasy-prose.zip",
-      "sha256": "b63e93a80204d045d7a128d7d3d3f3b3127ad0ae43d92eecf21c8c6ae774c2be",
-      "bytes": 6957,
+      "sha256": "d13d66d6eaf0510b1f5082331bcb09d41d1a79e1061e0e4460473c626369d366",
+      "bytes": 7177,
       "files": 6
     },
     {

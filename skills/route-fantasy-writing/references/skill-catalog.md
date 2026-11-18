@@ -9,8 +9,7 @@
 | 여러 회차에 걸친 인물 신념·관계의 변화 | `design-character-arcs` |
 | 독자에게 제시된 단서·정보 공개·회수 | `manage-fantasy-foreshadowing` |
 | 한 화 또는 인접 화의 목표·장면·끝 상태 | `structure-serial-chapters` |
-| 새 원고·이어쓰기·장면 전체 재작성 | `write-fantasy-prose` |
-| 원고 종료 상태와 공개본을 다음 회차에 인계 | `write-fantasy-prose`의 회차 기록 |
+| 새 원고·이어쓰기·장면 재작성, 작품별 문체 카드 작성 또는 회차 인계 | `write-fantasy-prose` |
 | 한 장면의 욕구·관계 갈등·감정과 선택 | `write-character-conflict` |
 | 위치·동선·시야·감각이 선명한 묘사 | `write-immersive-scenes` |
 | 전투·추격의 선택·비용·승패 인과 | `design-fantasy-action` |
