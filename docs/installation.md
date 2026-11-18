@@ -13,6 +13,8 @@
 | ChatGPT Skills 업로드 가능 계정 | [dist/chatgpt](../dist/chatgpt)의 배포 ZIP | 스킬명 폴더 안에 `SKILL.md`와 참고 자료. 업로드 형식은 계정 화면에서 확인 |
 | ChatGPT 프로젝트 | [프로젝트 지침](../platforms/chatgpt/project-instructions.md) + [단일 문서](../dist/chatgpt-project) | 지침 복사와 문서 업로드 |
 
+설치 파일을 열어 보면 `SKILL.md` 끝에 해당 서비스의 적용 지침이 있습니다. Gemini Apps는 업로드한 참고 파일과 활성 스킬, Claude는 스킬 폴더와 상대 경로, ChatGPT Skills는 현재 대화에서 선택한 스킬과 제공된 자료를 기준으로 작업합니다.
+
 개별 ZIP은 [스킬 목록](catalog.md)의 링크를 열고 파일 화면의 **Download raw file** 버튼으로 저장합니다. 저장소에서 **Code → Download ZIP**을 누르면 선택한 브랜치 전체가 내려받아집니다. 압축을 풀고 `dist`에서 서비스별 개별 스킬 파일을 찾으세요. [GitHub의 소스 아카이브 안내](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives)
 
 [장편 7개 묶음](../downloads/fantasy-longform-seven-skills.zip)과 [연재 점검 4개 묶음](../downloads/fantasy-webnovel-serial-skills.zip)도 먼저 풀고 사용할 서비스의 개별 파일을 선택합니다.

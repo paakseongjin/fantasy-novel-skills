@@ -12,6 +12,7 @@
 | `skills/스킬명/` | 기본 창작 17개와 라우터의 지침·참고 자료 | 배포물 재생성 |
 | `skills/build-fantasy-world/references/` | 세계관 공통 원본 | 통합형·영향받는 선택형 재생성 |
 | `config/worldbuilding-modules.json` | 선택형 8개 본문과 포함 파일 목록 | 배포물 재생성 |
+| `platforms/{서비스}/native-instructions.md` | 해당 환경의 자료 접근·스킬 인계 지침 | 해당 서비스의 모든 ZIP과 두 묶음 재생성 |
 | `platforms/chatgpt/project-instructions.md` | 프로젝트용 공통 지침 | 이 파일을 포함하는 묶음 재생성 |
 | `scripts/build_packages.py` | ZIP·단일 문서·manifest 생성 | 생성과 검사 모두 실행 |
 | `scripts/validate_repository.py` | 구조·수량·참조·생성물 검사 | 검사 실행 |
@@ -26,6 +27,7 @@ Python 3.9 이상과 표준 라이브러리를 사용합니다. 저장소 최상
 ```bash
 python scripts/build_packages.py
 python scripts/build_packages.py --check
+python scripts/test_build_packages.py
 python scripts/validate_repository.py
 ```
 
@@ -42,13 +44,13 @@ python scripts/validate_repository.py
 
 빌더는 Markdown을 UTF-8로 읽고 줄바꿈을 LF로 통일합니다. ZIP의 파일 순서·타임스탬프도 고정합니다. 같은 원본과 Python/zlib 환경에서는 같은 바이트를 생성합니다.
 
-압축 라이브러리 버전이 다르면 ZIP 바이트와 SHA-256이 달라질 수 있습니다. 검사는 여러 환경에서 ZIP 구조와 압축을 푼 파일을 대조하고, manifest는 저장된 ZIP의 실제 크기와 SHA-256에 맞는지 확인합니다. 생성된 프로젝트 문서와 manifest는 체크아웃 시에도 LF 줄바꿈을 사용합니다.
+압축 라이브러리 버전이 다르면 ZIP 바이트와 SHA-256이 달라질 수 있습니다. 기존 ZIP의 항목 순서·속성·파일 내용이 같으면 기존 바이트를 보존합니다. manifest에는 실제 배포하는 ZIP의 크기와 SHA-256을 기록합니다. 묶음 속 개별 ZIP도 같은 서비스의 개별 다운로드와 바이트 단위로 일치해야 합니다. 생성된 프로젝트 문서와 manifest는 체크아웃 시에도 LF 줄바꿈을 사용합니다.
 
 ## 자동 검사의 범위
 
 | 검사 | 확인하는 것 |
 |---|---|
-| 메타데이터 | 이름 형식·길이, 설명, 필수 값과 폴더명 일치 |
+| 메타데이터 | 이름 형식·길이, 설명, 필수 값과 폴더명 일치. 설명에 `: `가 있으면 값 전체를 따옴표로 감싸야 함 |
 | 패키지 참조 | 개별 패키지 안에서 참조 파일이 존재하는지 |
 | ZIP | 압축 무결성, 원본 내용 일치, 서비스별 최상위 구조 |
 | 배포 구성 | 총 26개 스킬·78개 ZIP·18개 프로젝트 문서 |

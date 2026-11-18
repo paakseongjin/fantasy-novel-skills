@@ -32,6 +32,12 @@ def metadata(text):
             value = value.strip()
             if value.startswith('"'):
                 value = json.loads(value)
+            elif value.startswith("'"):
+                if not re.fullmatch(r"'(?:[^']|'')*'", value):
+                    raise ValueError(f"Invalid quoted metadata field: {key}")
+                value = value[1:-1].replace("''", "'")
+            elif re.search(r":(?:\s|$)", value):
+                raise ValueError(f"Quote metadata field {key} when its value contains a colon separator")
             result[key] = value
     name, description = result.get("name", ""), result.get("description", "")
     if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name) or len(name) > 64:
@@ -169,12 +175,21 @@ def webnovel_bundle(outputs):
 
 def expected_outputs():
     skills, core_names = collect()
+    instructions = {
+        platform: (ROOT / "platforms" / platform / "native-instructions.md").read_text(encoding="utf-8").strip()
+        for platform in PLATFORMS
+    }
+    if not all(instructions.values()) or len(set(instructions.values())) != len(PLATFORMS):
+        raise ValueError("Each platform requires distinct, nonempty native instructions")
     outputs = {}
     records = []
     for name, payload in skills.items():
         for platform in PLATFORMS:
             path = f"dist/{platform}/{name}.zip"
-            data = archive(name, payload, platform)
+            platform_payload = dict(payload)
+            platform_payload["SKILL.md"] = payload["SKILL.md"].rstrip() + b"\n\n" + instructions[platform].encode() + b"\n"
+            check_payload(name, platform_payload)
+            data = reuse_archive(path, archive(name, platform_payload, platform))
             outputs[path] = data
             records.append({"path": path, "sha256": hashlib.sha256(data).hexdigest(),
                             "bytes": len(data), "files": len(payload)})
@@ -185,9 +200,19 @@ def expected_outputs():
               "zip_count": len(records), "packages": records,
               "live_platform_installation_tested": False}
     outputs["dist/manifest.json"] = (json.dumps(report, ensure_ascii=False, indent=2) + "\n").encode()
-    outputs["downloads/fantasy-longform-seven-skills.zip"] = longform_bundle(outputs)
-    outputs["downloads/fantasy-webnovel-serial-skills.zip"] = webnovel_bundle(outputs)
+    for path, build in (("downloads/fantasy-longform-seven-skills.zip", longform_bundle),
+                        ("downloads/fantasy-webnovel-serial-skills.zip", webnovel_bundle)):
+        outputs[path] = reuse_archive(path, build(outputs))
     return outputs
+
+
+def reuse_archive(path, expected):
+    dest = ROOT / path
+    if dest.is_file():
+        existing = dest.read_bytes()
+        if same_archive(existing, expected):
+            return existing
+    return expected
 
 
 def same_archive(actual, expected):
@@ -203,10 +228,7 @@ def same_archive(actual, expected):
                 if any(getattr(got, field) != getattr(want, field) for field in fields):
                     return False
                 got_data, want_data = left.read(got), right.read(want)
-                if got.filename.endswith(".zip"):
-                    if not same_archive(got_data, want_data):
-                        return False
-                elif got_data != want_data:
+                if got_data != want_data:
                     return False
     except (zipfile.BadZipFile, zlib.error, EOFError, RuntimeError):
         return False
@@ -217,7 +239,6 @@ def verify_outputs(outputs):
     stale = []
     manifest_path = "dist/manifest.json"
     manifest = json.loads(outputs[manifest_path])
-    by_path = {record["path"]: record for record in manifest["packages"]}
     for path, expected in outputs.items():
         if path == manifest_path:
             continue
@@ -226,12 +247,7 @@ def verify_outputs(outputs):
             stale.append(path)
             continue
         actual = dest.read_bytes()
-        if path.endswith(".zip"):
-            if not same_archive(actual, expected):
-                stale.append(path)
-            if path in by_path:
-                by_path[path].update(bytes=len(actual), sha256=hashlib.sha256(actual).hexdigest())
-        elif actual != expected:
+        if actual != expected:
             stale.append(path)
 
     manifest_file = ROOT / manifest_path
@@ -255,6 +271,8 @@ def main():
     if not args.check:
         for path, data in outputs.items():
             dest = ROOT / path
+            if dest.is_file() and dest.read_bytes() == data:
+                continue
             dest.parent.mkdir(parents=True, exist_ok=True)
             dest.write_bytes(data)
     errors = verify_outputs(outputs)

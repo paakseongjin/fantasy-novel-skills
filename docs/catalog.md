@@ -6,7 +6,7 @@
 
 ## 파일을 고르는 기준
 
-스킬 하나의 지침은 세 배포본에서 같습니다. Gemini ZIP은 `SKILL.md`를 루트에, Claude·ChatGPT용 ZIP은 스킬명 폴더 안에 둡니다. GitHub 파일 화면의 다운로드 버튼으로 저장한 뒤 [서비스별 등록 조건](installation.md)을 확인하세요.
+세 배포본은 같은 창작 기준을 사용합니다. 각 ZIP 안의 `SKILL.md`에는 해당 서비스에서 참고 자료를 찾고 다른 스킬에 작업을 넘기는 방법이 들어 있습니다. Gemini ZIP은 `SKILL.md`를 루트에, Claude·ChatGPT용 ZIP은 스킬명 폴더 안에 둡니다. GitHub 파일 화면의 다운로드 버튼으로 저장한 뒤 [서비스별 등록 조건](installation.md)을 확인하세요.
 
 - 처음에는 작업 하나에 필요한 스킬만 등록합니다.
 - 전문 스킬을 이미 등록했다면 라우터를 추가해 선택과 순서를 맡길 수 있습니다.
@@ -59,9 +59,11 @@
 
 | 자료 | 포함 내용 | 사용하는 방법 |
 |---|---|---|
-| [장편 창작 7개 묶음](../downloads/fantasy-longform-seven-skills.zip) | 플롯·성장·복선·회차·전투·대사·원고 진단 | 바깥 ZIP을 풀고 서비스별 개별 ZIP 등록 |
-| [연재 점검 4개 묶음](../downloads/fantasy-webnovel-serial-skills.zip) | 애착·초반 장벽·늘어짐·하차 위험 | 바깥 ZIP을 풀고 서비스별 개별 ZIP 등록 |
+| [장편 창작 7개 묶음](../downloads/fantasy-longform-seven-skills.zip) | 플롯·성장·복선·회차·전투·대사·원고 진단 | 압축을 풀고 아래의 서비스별 설치 방법 적용 |
+| [연재 점검 4개 묶음](../downloads/fantasy-webnovel-serial-skills.zip) | 애착·초반 장벽·늘어짐·하차 위험 | 압축을 풀고 아래의 서비스별 설치 방법 적용 |
 | [프로젝트용 문서 18개](../dist/chatgpt-project) | 기본 창작 17개와 라우터의 지침·참고 자료 | 필요한 문서만 프로젝트 소스로 추가하고, [공통 지침](../platforms/chatgpt/project-instructions.md)은 프로젝트 설정에 붙여 넣기 |
+
+Gemini와 Claude에서는 해당 폴더의 개별 ZIP을 등록하세요. ChatGPT Skills는 업로드 화면에서 ZIP을 받을 때 `chatgpt` 폴더의 개별 ZIP을 사용합니다. ChatGPT 프로젝트는 `chatgpt-project` 폴더에서 지침을 복사하고 필요한 `.md`를 소스로 추가합니다.
 
 두 묶음에는 해당 스킬의 프로젝트용 문서와 공통 프로젝트 지침도 들어 있습니다. 라우터는 두 묶음에 포함되지 않으므로 개별 파일로 받습니다. 프로젝트 방식의 선택형 세계관 작업은 통합형 문서를 사용하세요.
 

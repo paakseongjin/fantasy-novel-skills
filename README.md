@@ -54,6 +54,8 @@ refine-natural-korean을 적용해 다음 문장의 번역투와 호응만 다�
 | ChatGPT Skills 업로드 가능 계정 | [ChatGPT용 배포 ZIP](dist/chatgpt) | Plugins → Skills에서 업로드 형식 확인 |
 | ChatGPT 프로젝트 | [프로젝트 지침](platforms/chatgpt/project-instructions.md) + [프로젝트용 문서](dist/chatgpt-project) | 프로젝트 설정에 지침을 붙여 넣고 문서를 소스로 추가 |
 
+각 서비스용 ZIP의 `SKILL.md`에는 공통 창작 지침과 그 환경에서 참고 자료를 읽고 다음 스킬로 작업을 넘기는 방법이 들어 있습니다. 같은 이름의 스킬도 사용할 서비스 열에서 받으세요.
+
 메뉴와 이용 조건은 계정·워크스페이스에 따라 다릅니다. 등록 단계와 공식 근거는 [설치 안내](docs/installation.md)에서 확인하세요. 프로젝트 자료 방식은 네이티브 스킬 등록과 별개의 이용 방식입니다.
 
 ## 포함된 자료
